@@ -1,4 +1,4 @@
-import SocialTag from "./SocialTag";
+import SocialTag from "./shared/SocialTag";
 
 const Socials = () => {
   return (

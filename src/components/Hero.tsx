@@ -1,3 +1,5 @@
+import { ArrowRightIcon } from "@phosphor-icons/react";
+
 const Hero = () => {
   return (
     <section className="custom-container my-20 px-12">
@@ -12,9 +14,9 @@ const Hero = () => {
           </a>
           <a
             href="#projects"
-            className="text-2xl aspect-square bg-light-100 text-dark-100 rounded-full size-14 flex items-center justify-center"
+            className="text-2xl bg-light-100 text-dark-100 rounded-full size-14 flex items-center justify-center"
           >
-            &rarr;
+            <ArrowRightIcon size={24} />
           </a>
         </div>
       </div>
