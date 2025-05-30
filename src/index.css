@@ -13,10 +13,12 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    font-family: var(--font-open-sans);
-    color: var(--color-light-100);
-    background-color: var(--color-dark-100);
+    @apply font-open-sans text-light-100 bg-dark-100;
   }
 }
 

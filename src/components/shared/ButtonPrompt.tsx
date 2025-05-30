@@ -7,13 +7,19 @@ interface Props {
 
 const ButtonPrompt = ({ iconName }: Props) => {
   return (
-    <div>
-      <div className="size-14 flex items-center justify-center">
+    <div className="flex">
+      <a
+        href="#"
+        className="size-14 border-1 border-gray-100 rounded-full flex items-center justify-center"
+      >
         {getIcon(iconName, 24, "fill")}
-      </div>
-      <div className="bg-light-100 size-14 flex items-center justify-center">
+      </a>
+      <a
+        href="#"
+        className="bg-light-100 text-dark-100 rounded-full size-14 -ml-5 flex items-center justify-center"
+      >
         <ArrowUpRightIcon size={24} />
-      </div>
+      </a>
     </div>
   );
 };
