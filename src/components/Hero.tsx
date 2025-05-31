@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="custom-container my-20 px-12">
       <div className="flex justify-between items-end mb-12">
-        <h1 className="font-fira-code text-9xl/23 font-semibold">Frontend</h1>
+        <h1 className="font-fira-code text-9xl/23 font-semibold">Full-stack</h1>
         <div className="flex gap-4 items-end">
           <a
             href="#projects"

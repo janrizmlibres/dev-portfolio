@@ -20,6 +20,10 @@
   body {
     @apply font-open-sans text-light-100 bg-dark-100;
   }
+
+  em {
+    @apply text-light-100;
+  }
 }
 
 @layer components {
