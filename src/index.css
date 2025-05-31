@@ -30,8 +30,32 @@
   .nav-link {
     @apply hover:text-light-100 transition-colors duration-300;
   }
+
+  .subheading {
+    @apply font-fira-code font-semibold;
+  }
+
+  .project-entry {
+    @apply grid grid-cols-6 gap-4;
+  }
 }
 
 @utility custom-container {
   @apply max-w-[90rem] mx-auto;
+}
+
+@utility clip-path-top {
+  clip-path: inset(0 0 calc(50% + 0.5rem) 0 round 2rem 2rem 2rem 0);
+}
+
+@utility clip-path-bottom {
+  clip-path: inset(
+    calc(50% - 1.5rem) calc(33.33% + 0.33rem) 0 0 round 0 0 2rem 2rem
+  );
+}
+
+@utility clip-path-center {
+  clip-path: inset(
+    calc(50% - 0.6rem) 20% 25% calc(100% - (33.33% + 0.33rem) - 0.1rem)
+  );
 }

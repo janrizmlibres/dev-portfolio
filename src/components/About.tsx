@@ -7,9 +7,7 @@ const About = () => {
     <section className="mt-48 mb-32" id="about">
       <section className="custom-container px-12">
         <div className="flex items-start mb-24">
-          <h2 className="flex-3 font-fira-code font-semibold">
-            &hellip; /About me &hellip;
-          </h2>
+          <h2 className="flex-3 subheading">&hellip; /About me &hellip;</h2>
           <p className="flex-4 text-gray-100 text-xl">
             Hello! I'm Janriz. I'm a full-stack developer with 2 years of
             experience.
@@ -60,22 +58,22 @@ const About = () => {
       </section>
 
       <section>
-        <h1 className="custom-container text-right font-fira-code text-9xl font-semibold my-8 px-12">
+        <h3 className="custom-container text-right font-fira-code text-9xl font-semibold my-8 px-12">
           Work
-        </h1>
+        </h3>
 
         <WorkPanel
           years="2024"
           duration="3 months"
           company="Elinnov Technologies"
-          role="Software Engineering Intern"
+          role="Software Engineer Intern"
           tech="ASP.NET & React"
         />
         <WorkPanel
           years="2023 - 2024"
           duration="10 months"
           company="The Crusader Yearbook"
-          role="Software Developer"
+          role="Web Developer"
           tech="Laravel"
           isLast
         />
