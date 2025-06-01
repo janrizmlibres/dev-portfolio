@@ -4,6 +4,7 @@ import {
   TelegramLogoIcon,
   FacebookLogoIcon,
   InstagramLogoIcon,
+  EnvelopeIcon,
   type IconWeight,
 } from "@phosphor-icons/react";
 
@@ -19,6 +20,8 @@ export const getIcon = (platform: string, size: number, weight: IconWeight) => {
       return <FacebookLogoIcon size={size} weight={weight} />;
     case "Instagram":
       return <InstagramLogoIcon size={size} weight={weight} />;
+    case "Email":
+      return <EnvelopeIcon size={size} weight={weight} />;
     default:
       return null;
   }

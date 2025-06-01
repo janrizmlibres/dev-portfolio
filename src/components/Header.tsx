@@ -10,19 +10,19 @@ const Header = () => {
           </h1>
         </a>
 
-        <ul className="flex gap-10 w-fit mx-auto my-4 text-gray-100">
+        <ul className="flex gap-10 w-fit mx-auto my-4">
           <li>
-            <a href="#about" className="nav-link">
+            <a href="#about" className="link-item">
               About
             </a>
           </li>
           <li>
-            <a href="#projects" className="nav-link">
+            <a href="#projects" className="link-item">
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="nav-link">
+            <a href="#contact" className="link-item">
               Contacts
             </a>
           </li>

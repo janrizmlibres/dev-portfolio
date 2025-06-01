@@ -27,8 +27,8 @@
 }
 
 @layer components {
-  .nav-link {
-    @apply hover:text-light-100 transition-colors duration-300;
+  .link-item {
+    @apply text-gray-100 hover:text-light-100 transition-colors duration-300;
   }
 
   .subheading {
