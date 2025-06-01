@@ -1,3 +1,5 @@
+import ProjectDetails from "./ProjectDetails";
+
 const ProjectPanel = () => {
   return (
     <div className="project-entry relative">
@@ -7,9 +9,9 @@ const ProjectPanel = () => {
 
       <div className="project-entry absolute inset-0">
         <div className="relative rounded-4xl col-start-3 col-span-3 row-span-2 flex">
-          <div className="absolute inset-0 bg-[url(./assets/temp.jpg)] bg-cover clip-path-top"></div>
-          <div className="absolute inset-0 bg-[url(./assets/temp.jpg)] bg-cover clip-path-bottom"></div>
-          <div className="absolute inset-0 bg-[url(./assets/temp.jpg)] bg-cover clip-path-center"></div>
+          <div className="absolute inset-0 bg-gray-200 clip-path-top"></div>
+          <div className="absolute inset-0 bg-gray-200 clip-path-bottom"></div>
+          <div className="absolute inset-0 bg-gray-200 clip-path-center"></div>
 
           <div className="ml-auto mt-auto pt-4 pl-4 w-[calc(33.33%+0.33rem)] h-[calc(50%+0.5rem)] rounded-tl-[2.5rem] bg-dark-100 z-1">
             <div className="size-full rounded-4xl bg-gray-100"></div>
@@ -17,6 +19,17 @@ const ProjectPanel = () => {
         </div>
         <div className="rounded-4xl bg-gray-100 col-start-6"></div>
         <div className="rounded-4xl bg-gray-100 col-start-4 row-start-3"></div>
+
+        <div className="col-span-2 row-start-1 row-span-3">
+          <ProjectDetails
+            title="Gostat"
+            tools={["TypeScript", "Nextjs", "MongoDB", "Tailwind"]}
+          >
+            <em>DevFlow</em> is a project management tool designed to streamline
+            the development process, offering features like task tracking,
+            collaboration, and real-time updates.
+          </ProjectDetails>
+        </div>
       </div>
     </div>
   );

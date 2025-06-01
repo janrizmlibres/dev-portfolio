@@ -38,6 +38,10 @@
   .project-entry {
     @apply grid grid-cols-6 gap-4;
   }
+
+  .tech-item {
+    @apply font-fira-code px-4 py-2 border border-gray-200 rounded-full;
+  }
 }
 
 @utility custom-container {
