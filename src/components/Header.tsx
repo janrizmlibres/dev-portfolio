@@ -11,7 +11,6 @@ const Header = () => {
             Libres
           </h1>
         </a>
-
         <LinksHolder
           links={[
             { name: "About" },

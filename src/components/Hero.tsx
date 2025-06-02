@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex justify-between items-center gap-48">
-        <p className="text-gray-100 text-xl pl-4">
+        <p className="medium-text pl-4">
           My goal is to write maintainable, clean and understandable code to
           process development was enjoyable.
         </p>

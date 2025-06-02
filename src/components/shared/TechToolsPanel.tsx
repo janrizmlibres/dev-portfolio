@@ -1,11 +1,16 @@
 interface Props {
   title: string;
-  body: string;
   active?: boolean;
   className?: string;
+  children?: React.ReactNode;
 }
 
-const TechToolsPanel = ({ title, body, active = false, className }: Props) => {
+const TechToolsPanel = ({
+  title,
+  active = false,
+  className,
+  children,
+}: Props) => {
   return (
     <div
       className={`p-6 rounded-4xl border-1 border-gray-200 ${
@@ -13,7 +18,7 @@ const TechToolsPanel = ({ title, body, active = false, className }: Props) => {
       } ${className}`}
     >
       <h3 className="text-2xl mb-3">{title}</h3>
-      <p className="font-fira-code font-semibold leading-8">{body}</p>
+      <p className="font-fira-code font-medium leading-8">{children}</p>
     </div>
   );
 };

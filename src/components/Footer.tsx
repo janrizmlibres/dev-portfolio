@@ -8,8 +8,12 @@ const Footer = () => {
       <div className="col-span-4">
         <h1 className="large-text mb-12">Janriz</h1>
         <div className="flex items-center gap-4">
-          <p>Full-stack Developer</p>
-          <h1 className="large-text">Libres</h1>
+          <p className="medium-text flex-1/4">
+            Full-stack
+            <br />
+            developer
+          </p>
+          <h1 className="large-text flex-3/4">Libres</h1>
         </div>
       </div>
 
@@ -23,10 +27,11 @@ const Footer = () => {
           className="justify-between mb-6"
         />
 
-        <TechToolsPanel
-          title="Site"
-          body="Developed by ME / Designed by Taisia / Powered by React"
-        />
+        <TechToolsPanel title="Site">
+          Developed by ME /<br />
+          Designed by Taisia /<br />
+          Powered by React
+        </TechToolsPanel>
       </div>
 
       <SocialTag platform="Github" />

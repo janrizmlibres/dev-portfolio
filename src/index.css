@@ -35,6 +35,10 @@
     @apply font-fira-code text-9xl/23 font-semibold;
   }
 
+  .medium-text {
+    @apply text-gray-100 text-xl;
+  }
+
   .subheading {
     @apply font-fira-code font-semibold;
   }

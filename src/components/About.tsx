@@ -15,28 +15,23 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-4 gap-4">
-          <TechToolsPanel
-            className="col-span-2"
-            title="Front-end"
-            body="TypeScript / React / React Native / NextJs (App Router) / Vite / Vue / Vitest / Mocha / Chai / Pinia"
-            active
-          />
+          <TechToolsPanel className="col-span-2" title="Front-end" active>
+            TypeScript / React / React Native / NextJs (App Router) / Vite / Vue
+            / Vitest / Mocha / Chai / Pinia
+          </TechToolsPanel>
 
-          <TechToolsPanel
-            className="row-2"
-            title="Styles"
-            body="SCSS / SASS / Tailwind / Shadcn / CSS Modules"
-          />
+          <TechToolsPanel className="row-2" title="Styles">
+            SCSS / SASS / Tailwind / Shadcn / CSS Modules
+          </TechToolsPanel>
 
           <div className="row-2 flex items-center justify-center">
             <ButtonPrompt iconName="Github" />
           </div>
 
-          <TechToolsPanel
-            className="row-3 col-span-2"
-            title="Back-end"
-            body="PostgreSQL / MySQL / MS SQL Server / Node.js / Express / Prisma / MongoDB / ASP.NET / Entity Framework"
-          />
+          <TechToolsPanel className="row-3 col-span-2" title="Back-end">
+            PostgreSQL / MySQL / MS SQL Server / Node.js / Express / Prisma /
+            MongoDB / ASP.NET / Entity Framework
+          </TechToolsPanel>
 
           <div className="row-4 flex items-center text-gray-100 w-9/10">
             <p>
@@ -45,11 +40,9 @@ const About = () => {
             </p>
           </div>
 
-          <TechToolsPanel
-            className="row-4 col-2"
-            title="DevOps"
-            body="Docker / GitHub Actions (CI/CD) / Bash"
-          />
+          <TechToolsPanel className="row-4 col-2" title="DevOps">
+            Docker / GitHub Actions (CI/CD) / Bash
+          </TechToolsPanel>
 
           <div className="col-start-3 col-span-2 row-span-3">
             <div className="w-2/3 h-full ml-auto rounded-4xl bg-gray-100"></div>
@@ -58,7 +51,7 @@ const About = () => {
       </section>
 
       <section>
-        <h3 className="custom-container text-right font-fira-code text-9xl font-semibold my-8 px-12">
+        <h3 className="custom-container large-text text-right my-8 px-12">
           Work
         </h3>
 

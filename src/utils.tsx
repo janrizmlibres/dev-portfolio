@@ -26,7 +26,3 @@ export const getIcon = (platform: string, size: number, weight: IconWeight) => {
       return null;
   }
 };
-
-export const isObject = (value: unknown): value is Record<string, unknown> => {
-  return typeof value === "object" && !Array.isArray(value) && value !== null;
-};
