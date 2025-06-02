@@ -12,7 +12,7 @@ const LinksHolder = ({ links, className }: Props) => {
   return (
     <ul className={`flex gap-10 ${className}`}>
       {links.map((link) => (
-        <li>
+        <li key={link.name}>
           <a
             href={`#${
               link.url || link.name.toLowerCase().replace(/\s+/g, "-")

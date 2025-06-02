@@ -1,4 +1,9 @@
-export const socials = [
+export interface Social {
+  name: string;
+  url: string;
+}
+
+export const socials: Social[] = [
   {
     name: "Github",
     url: "https://github.com/janrizmlibres/",
@@ -21,10 +26,11 @@ export const socials = [
   },
 ];
 
-export const socialsPlusEmail = [
-  ...socials,
+export const socialsPlusEmail: Social[] = [
+  ...socials.slice(0, 2),
   {
     name: "Email",
-    //TODO url: "mailto:
+    url: "temp", // TODO: Update
   },
+  ...socials.slice(2),
 ];

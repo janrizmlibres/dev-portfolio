@@ -1,13 +1,12 @@
 import SocialTag from "./shared/SocialTag";
+import { socials } from "../data";
 
 const Socials = () => {
   return (
     <section className="flex justify-center gap-8 custom-container">
-      <SocialTag platform="Github" />
-      <SocialTag platform="LinkedIn" />
-      <SocialTag platform="Telegram" />
-      <SocialTag platform="Facebook" />
-      <SocialTag platform="Instagram" />
+      {socials.map((social) => (
+        <SocialTag key={social.name} social={social} />
+      ))}
     </section>
   );
 };

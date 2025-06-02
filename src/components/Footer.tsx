@@ -1,6 +1,7 @@
 import LinksHolder from "./shared/LinksHolder";
 import SocialTag from "./shared/SocialTag";
 import TechToolsPanel from "./shared/TechToolsPanel";
+import { socialsPlusEmail } from "../data";
 
 const Footer = () => {
   return (
@@ -34,12 +35,9 @@ const Footer = () => {
         </TechToolsPanel>
       </div>
 
-      <SocialTag platform="Github" />
-      <SocialTag platform="LinkedIn" />
-      <SocialTag platform="Email" />
-      <SocialTag platform="Telegram" />
-      <SocialTag platform="Facebook" />
-      <SocialTag platform="Instagram" />
+      {socialsPlusEmail.map((social) => (
+        <SocialTag key={social.name} social={social} />
+      ))}
     </section>
   );
 };
