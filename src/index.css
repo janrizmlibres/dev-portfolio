@@ -31,6 +31,10 @@
     @apply text-gray-100 hover:text-light-100 transition-colors duration-300;
   }
 
+  .large-text {
+    @apply font-fira-code text-9xl/23 font-semibold;
+  }
+
   .subheading {
     @apply font-fira-code font-semibold;
   }

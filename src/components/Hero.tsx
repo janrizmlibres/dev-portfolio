@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="custom-container my-20 px-12">
       <div className="flex justify-between items-end mb-12">
-        <h1 className="font-fira-code text-9xl/23 font-semibold">Full-stack</h1>
+        <h1 className="large-text">Full-stack</h1>
         <div className="flex gap-4 items-end">
           <a
             href="#projects"
@@ -25,7 +25,7 @@ const Hero = () => {
           My goal is to write maintainable, clean and understandable code to
           process development was enjoyable.
         </p>
-        <h1 className="font-fira-code text-9xl/23 font-semibold">Developer</h1>
+        <h1 className="large-text">Developer</h1>
       </div>
     </section>
   );

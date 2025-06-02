@@ -1,3 +1,4 @@
+import LinksHolder from "./shared/LinksHolder";
 import SocialTag from "./shared/SocialTag";
 import TechToolsPanel from "./shared/TechToolsPanel";
 
@@ -5,10 +6,10 @@ const Footer = () => {
   return (
     <section className="custom-container px-12 grid grid-cols-6 items-end gap-x-4 gap-y-12 mb-8">
       <div className="col-span-4">
-        <h1 className="text-9xl">Janriz</h1>
+        <h1 className="large-text mb-12">Janriz</h1>
         <div className="flex items-center gap-4">
           <p>Full-stack Developer</p>
-          <h1 className="text-9xl">Libres</h1>
+          <h1 className="large-text">Libres</h1>
         </div>
       </div>
 
@@ -17,23 +18,10 @@ const Footer = () => {
           &hellip; /Contacts &hellip;
         </h2>
 
-        <ul className="flex justify-between mb-6">
-          <li>
-            <a href="#" className="link-item">
-              Main
-            </a>
-          </li>
-          <li>
-            <a href="#" className="link-item">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="link-item">
-              Project
-            </a>
-          </li>
-        </ul>
+        <LinksHolder
+          links={[{ name: "Main" }, { name: "About" }, { name: "Projects" }]}
+          className="justify-between mb-6"
+        />
 
         <TechToolsPanel
           title="Site"

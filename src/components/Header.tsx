@@ -1,3 +1,5 @@
+import LinksHolder from "./shared/LinksHolder";
+
 const Header = () => {
   return (
     <header>
@@ -10,23 +12,14 @@ const Header = () => {
           </h1>
         </a>
 
-        <ul className="flex gap-10 w-fit mx-auto my-4">
-          <li>
-            <a href="#about" className="link-item">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="link-item">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="link-item">
-              Contacts
-            </a>
-          </li>
-        </ul>
+        <LinksHolder
+          links={[
+            { name: "About" },
+            { name: "Projects" },
+            { name: "Contacts" },
+          ]}
+          className="w-fit mx-auto my-4"
+        />
       </nav>
     </header>
   );
