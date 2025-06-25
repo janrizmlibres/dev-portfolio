@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { fadeDown } from "../../variants";
+import { animateOnScroll, fadeDown } from "../../animation";
 
 interface Link {
   name: string;
@@ -14,11 +14,7 @@ interface Props {
 const LinksHolder = ({ links, className }: Props) => {
   return (
     <motion.ul
-      variants={fadeDown}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, type: "tween" }}
+      {...animateOnScroll(fadeDown)}
       className={`flex gap-10 ${className}`}
     >
       {links.map((link) => (

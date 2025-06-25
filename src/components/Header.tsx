@@ -1,16 +1,22 @@
+import { animateOnScroll, fadeRight } from "../animation";
 import LinksHolder from "./shared/LinksHolder";
+import { motion } from "motion/react";
 
 const Header = () => {
   return (
     <header>
       <nav className="py-6 px-12 relative">
-        <a href="#" className="absolute top-1/2 -translate-y-1/2 text-xl">
+        <motion.a
+          {...animateOnScroll(fadeRight)}
+          href="#"
+          className="absolute top-1/2 -translate-y-1/2 text-xl"
+        >
           <h1>
             Janriz
             <br />
             Libres
           </h1>
-        </a>
+        </motion.a>
         <LinksHolder
           links={[
             { name: "About" },

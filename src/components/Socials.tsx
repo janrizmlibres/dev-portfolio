@@ -1,17 +1,13 @@
 import SocialTag from "./shared/SocialTag";
 import { socials } from "../data";
 import { motion } from "motion/react";
-import { fadeUp } from "../variants";
+import { animateOnScroll, fadeUp } from "../animation";
 
 const Socials = () => {
   return (
     <section className="custom-container">
       <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, type: "tween" }}
+        {...animateOnScroll(fadeUp)}
         className={[
           "mx-auto w-[851.33px] overflow-hidden flex gap-8 relative",
         ].join(" ")}

@@ -1,27 +1,16 @@
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
-import { fadeLeft, fadeRight } from "../variants";
+import { animateOnScroll, fadeLeft, fadeRight } from "../animation";
 
 const Hero = () => {
   return (
     <section className="custom-container my-20 px-12">
       <div className="flex justify-between items-end mb-12">
-        <motion.h1
-          variants={fadeRight}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, type: "tween" }}
-          className="large-text"
-        >
+        <motion.h1 {...animateOnScroll(fadeRight)} className="large-text">
           Full-stack
         </motion.h1>
         <motion.div
-          variants={fadeLeft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, type: "tween" }}
+          {...animateOnScroll(fadeLeft)}
           className="flex gap-4 items-end"
         >
           <a
@@ -39,25 +28,11 @@ const Hero = () => {
         </motion.div>
       </div>
       <div className="flex justify-between items-center gap-48">
-        <motion.p
-          variants={fadeRight}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, type: "tween" }}
-          className="medium-text pl-4"
-        >
+        <motion.p {...animateOnScroll(fadeRight)} className="medium-text pl-4">
           My goal is to write maintainable, clean and understandable code to
           process development was enjoyable.
         </motion.p>
-        <motion.h1
-          variants={fadeLeft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, type: "tween" }}
-          className="large-text"
-        >
+        <motion.h1 {...animateOnScroll(fadeLeft)} className="large-text">
           Developer
         </motion.h1>
       </div>
