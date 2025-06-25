@@ -25,6 +25,6 @@ export const animateOnScroll = (variant: Variants): MotionProps => ({
   variants: variant,
   initial: "hidden",
   whileInView: "visible",
-  viewport: { once: true },
-  transition: { duration: 0.5, type: "tween" },
+  viewport: { once: true, amount: 0.5 },
+  transition: { duration: 0.4, type: "tween", ease: "easeOut" },
 });

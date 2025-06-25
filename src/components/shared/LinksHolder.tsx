@@ -1,6 +1,3 @@
-import { motion } from "motion/react";
-import { animateOnScroll, fadeDown } from "../../animation";
-
 interface Link {
   name: string;
   url?: string;
@@ -13,10 +10,7 @@ interface Props {
 
 const LinksHolder = ({ links, className }: Props) => {
   return (
-    <motion.ul
-      {...animateOnScroll(fadeDown)}
-      className={`flex gap-10 ${className}`}
-    >
+    <ul className={`flex gap-10 ${className}`}>
       {links.map((link) => (
         <li key={link.name}>
           <a
@@ -29,7 +23,7 @@ const LinksHolder = ({ links, className }: Props) => {
           </a>
         </li>
       ))}
-    </motion.ul>
+    </ul>
   );
 };
 

@@ -1,4 +1,6 @@
+import { animateOnScroll, fadeUp } from "../../animation";
 import ProjectDetails from "./ProjectDetails";
+import { motion } from "motion/react";
 
 const ProjectPanel = () => {
   return (
@@ -8,7 +10,10 @@ const ProjectPanel = () => {
       <div className="aspect-square row-start-3"></div>
 
       <div className="project-entry absolute inset-0">
-        <div className="relative rounded-4xl col-start-3 col-span-3 row-span-2 flex">
+        <motion.div
+          {...animateOnScroll(fadeUp)}
+          className="relative rounded-4xl col-start-3 col-span-3 row-span-2 flex"
+        >
           <div className="absolute inset-0 bg-gray-200 clip-path-top"></div>
           <div className="absolute inset-0 bg-gray-200 clip-path-bottom"></div>
           <div className="absolute inset-0 bg-gray-200 clip-path-center"></div>
@@ -16,9 +21,15 @@ const ProjectPanel = () => {
           <div className="ml-auto mt-auto pt-4 pl-4 w-[calc(33.33%+0.33rem)] h-[calc(50%+0.5rem)] rounded-tl-[2.5rem] bg-dark-100 z-1">
             <div className="size-full rounded-4xl bg-gray-100"></div>
           </div>
-        </div>
-        <div className="rounded-4xl bg-gray-100 col-start-6"></div>
-        <div className="rounded-4xl bg-gray-100 col-start-4 row-start-3"></div>
+        </motion.div>
+        <motion.div
+          {...animateOnScroll(fadeUp)}
+          className="rounded-4xl bg-gray-100 col-start-6"
+        ></motion.div>
+        <motion.div
+          {...animateOnScroll(fadeUp)}
+          className="rounded-4xl bg-gray-100 col-start-4 row-start-3"
+        ></motion.div>
 
         <div className="col-span-2 row-start-1 row-span-3">
           <ProjectDetails

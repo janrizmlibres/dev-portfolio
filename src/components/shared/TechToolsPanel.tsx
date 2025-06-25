@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import { animateOnScroll, fadeUp } from "../../animation";
+
 interface Props {
   title: string;
   active?: boolean;
@@ -7,10 +10,11 @@ interface Props {
 
 const TechToolsPanel = ({ title, className, children }: Props) => {
   return (
-    <div
+    <motion.div
+      {...animateOnScroll(fadeUp)}
       className={[
         "group p-6 rounded-4xl border-1 border-gray-200 overflow-hidden relative text-gray-100 hover:text-gray-200",
-        `transition-all duration-200 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out ${className}`,
+        `transition-colors duration-200 ease-in-out hover:transition-colors hover:duration-500 hover:ease-in-out ${className}`,
       ].join(" ")}
     >
       <h3 className="text-2xl mb-3">{title}</h3>
@@ -22,7 +26,7 @@ const TechToolsPanel = ({ title, className, children }: Props) => {
           "group-hover:ease-in-out group-hover:scale-100 group-hover:translate-z-0",
         ].join(" ")}
       ></span>
-    </div>
+    </motion.div>
   );
 };
 

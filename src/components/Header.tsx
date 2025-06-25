@@ -1,4 +1,4 @@
-import { animateOnScroll, fadeRight } from "../animation";
+import { animateOnScroll, fadeDown, fadeRight } from "../animation";
 import LinksHolder from "./shared/LinksHolder";
 import { motion } from "motion/react";
 
@@ -17,14 +17,16 @@ const Header = () => {
             Libres
           </h1>
         </motion.a>
-        <LinksHolder
-          links={[
-            { name: "About" },
-            { name: "Projects" },
-            { name: "Contacts" },
-          ]}
-          className="w-fit mx-auto my-4"
-        />
+        <motion.div {...animateOnScroll(fadeDown)}>
+          <LinksHolder
+            links={[
+              { name: "About" },
+              { name: "Projects" },
+              { name: "Contacts" },
+            ]}
+            className="w-fit mx-auto my-4"
+          />
+        </motion.div>
       </nav>
     </header>
   );
