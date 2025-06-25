@@ -1,6 +1,5 @@
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
 import { getIcon } from "../../utils";
-
 interface Props {
   iconName: string;
 }

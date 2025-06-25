@@ -10,6 +10,17 @@
 
   --font-fira-code: "Fira Code", monospace;
   --font-open-sans: "Open Sans", sans-serif;
+
+  --animate-infinite-slide: slide 25s linear infinite;
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 32px));
+    }
+  }
 }
 
 @layer base {

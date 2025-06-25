@@ -1,11 +1,7 @@
 import type { Social } from "../../data";
 import { getIcon } from "../../utils";
 
-interface Props {
-  social: Social;
-}
-
-const SocialTag = ({ social: { name, url } }: Props) => {
+const SocialTag = ({ social: { name, url } }: { social: Social }) => {
   return (
     <a
       href={url}
