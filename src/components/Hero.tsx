@@ -1,11 +1,29 @@
 import { ArrowRightIcon } from "@phosphor-icons/react";
+import { motion } from "motion/react";
+import { fadeLeft, fadeRight } from "../variants";
 
 const Hero = () => {
   return (
     <section className="custom-container my-20 px-12">
       <div className="flex justify-between items-end mb-12">
-        <h1 className="large-text">Full-stack</h1>
-        <div className="flex gap-4 items-end">
+        <motion.h1
+          variants={fadeRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, type: "tween" }}
+          className="large-text"
+        >
+          Full-stack
+        </motion.h1>
+        <motion.div
+          variants={fadeLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, type: "tween" }}
+          className="flex gap-4 items-end"
+        >
           <a
             href="#projects"
             className="bg-light-100 text-dark-100 text-xl italic font-medium rounded-full h-14 px-30 flex items-center"
@@ -18,14 +36,30 @@ const Hero = () => {
           >
             <ArrowRightIcon size={24} />
           </a>
-        </div>
+        </motion.div>
       </div>
       <div className="flex justify-between items-center gap-48">
-        <p className="medium-text pl-4">
+        <motion.p
+          variants={fadeRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, type: "tween" }}
+          className="medium-text pl-4"
+        >
           My goal is to write maintainable, clean and understandable code to
           process development was enjoyable.
-        </p>
-        <h1 className="large-text">Developer</h1>
+        </motion.p>
+        <motion.h1
+          variants={fadeLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, type: "tween" }}
+          className="large-text"
+        >
+          Developer
+        </motion.h1>
       </div>
     </section>
   );

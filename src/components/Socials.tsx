@@ -1,10 +1,17 @@
 import SocialTag from "./shared/SocialTag";
 import { socials } from "../data";
+import { motion } from "motion/react";
+import { fadeUp } from "../variants";
 
 const Socials = () => {
   return (
     <section className="custom-container">
-      <div
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, type: "tween" }}
         className={[
           "mx-auto w-[851.33px] overflow-hidden flex gap-8 relative",
         ].join(" ")}
@@ -16,7 +23,7 @@ const Socials = () => {
             ))}
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import { fadeDown } from "../../variants";
+
 interface Link {
   name: string;
   url?: string;
@@ -10,7 +13,14 @@ interface Props {
 
 const LinksHolder = ({ links, className }: Props) => {
   return (
-    <ul className={`flex gap-10 ${className}`}>
+    <motion.ul
+      variants={fadeDown}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, type: "tween" }}
+      className={`flex gap-10 ${className}`}
+    >
       {links.map((link) => (
         <li key={link.name}>
           <a
@@ -23,7 +33,7 @@ const LinksHolder = ({ links, className }: Props) => {
           </a>
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
