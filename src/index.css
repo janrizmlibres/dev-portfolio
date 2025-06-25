@@ -11,6 +11,8 @@
   --font-fira-code: "Fira Code", monospace;
   --font-open-sans: "Open Sans", sans-serif;
 
+  --background-image-profile: url("./assets/profile.jpg");
+
   --animate-infinite-slide: slide 25s linear infinite;
 
   @keyframes slide {

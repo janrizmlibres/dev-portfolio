@@ -3,6 +3,7 @@ import ButtonPrompt from "./shared/ButtonPrompt";
 import WorkPanel from "./shared/WorkPanel";
 import { motion } from "motion/react";
 import { animateOnScroll, fadeLeft, fadeRight } from "../animation";
+import profile from "../assets/profile.jpg";
 
 const About = () => {
   return (
@@ -64,7 +65,13 @@ const About = () => {
             {...animateOnScroll(fadeLeft)}
             className="col-start-3 col-span-2 row-span-3"
           >
-            <div className="w-2/3 h-full ml-auto rounded-4xl bg-gray-100"></div>
+            <div className="w-2/3 h-full ml-auto rounded-4xl overflow-hidden">
+              <img
+                src={profile}
+                alt="Profile Image"
+                className="h-full object-cover hover:scale-115 transition-all duration-300 grayscale"
+              />
+            </div>
           </motion.div>
         </div>
       </section>

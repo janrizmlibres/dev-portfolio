@@ -17,7 +17,7 @@ const WorkPanel = ({
 }: Props) => {
   return (
     <div
-      className={`cursor-default hover:bg-light-100 transition-all duration-150 group border-gray-200 ${
+      className={`cursor-default hover:bg-light-100 group border-gray-200 ${
         isLast ? "border-y" : "border-t"
       }`}
     >
