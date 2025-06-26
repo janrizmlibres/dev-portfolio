@@ -15,9 +15,11 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="bg-light-100 text-dark-100 text-xl italic font-medium rounded-full h-14 px-30 flex items-center"
+            className="text-dark-100 text-xl italic font-medium rounded-full h-14 px-30 flex items-center relative group"
           >
-            Projects
+            <span className="absolute inset-0 bg-light-100 rounded-full group-hover:rounded-3xl transition-transform duration-300 ease-[cubic-bezier(0.2,1,0.7,1)] group-hover:transform-[scale3d(0.93,0.7,1)]"></span>
+            <span className="z-1">Projects</span>
+            <span className="absolute inset-0 rounded-full border-2 border-light-100 transition-transform duration-300 ease-[cubic-bezier(0.2,1,0.7,1)] transform-[scale3d(0.85,0.65,1)] group-hover:transform-[scale3d(1,1,1)]"></span>
           </a>
           <a
             href="#projects"
