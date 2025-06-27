@@ -11,21 +11,29 @@ const Hero = () => {
         </motion.h1>
         <motion.div
           {...animateOnScroll(fadeLeft)}
-          className="flex gap-4 items-end"
+          className="flex gap-4 items-end group"
         >
           <a
             href="#projects"
-            className="text-dark-100 text-xl italic font-medium rounded-full h-14 px-30 flex items-center relative group"
+            className="text-dark-100 text-xl italic font-medium rounded-full h-14 px-30 flex items-center relative overflow-hidden group-hover:text-light-100 group-hover:border border-light-100 transition-all duration-200 delay-200 group-hover:delay-0"
           >
-            <span className="absolute inset-0 bg-light-100 rounded-full group-hover:rounded-3xl transition-transform duration-300 ease-[cubic-bezier(0.2,1,0.7,1)] group-hover:transform-[scale3d(0.93,0.7,1)]"></span>
-            <span className="z-1">Projects</span>
-            <span className="absolute inset-0 rounded-full border-2 border-light-100 transition-transform duration-300 ease-[cubic-bezier(0.2,1,0.7,1)] transform-[scale3d(0.85,0.65,1)] group-hover:transform-[scale3d(1,1,1)]"></span>
+            <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 delay-200 group-hover:delay-0 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:transform-[translate3d(100%,0,0)]"></span>
+            <span className="block relative overflow-hidden">
+              <span className="block relative group-hover:animate-btn-hover">
+                Projects
+              </span>
+            </span>
           </a>
           <a
             href="#projects"
-            className="text-2xl bg-light-100 text-dark-100 rounded-full size-14 flex items-center justify-center"
+            className="text-2xl text-dark-100 bg-dark-100 rounded-full size-14 flex items-center justify-center relative overflow-hidden group-hover:text-light-100 group-hover:border border-light-100 transition-all duration-200 group-hover:delay-200"
           >
-            <ArrowRightIcon size={24} />
+            <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 group-hover:delay-200 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:transform-[translate3d(100%,0,0)]"></span>
+            <span className="block relative overflow-hidden">
+              <span className="block relative delay-200 group-hover:animate-btn-hover-delayed">
+                <ArrowRightIcon size={24} />
+              </span>
+            </span>
           </a>
         </motion.div>
       </div>

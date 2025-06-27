@@ -14,6 +14,9 @@
   --background-image-profile: url("./assets/profile.jpg");
 
   --animate-infinite-slide: slide 25s linear infinite;
+  --animate-btn-hover: moveUpInitial 0.2s forwards, moveUpEnd 0.2s forwards 0.2s;
+  --animate-btn-hover-delayed: moveUpInitial 0.2s forwards 0.3s,
+    moveUpEnd 0.2s forwards 0.5s;
 
   @keyframes slide {
     from {
@@ -21,6 +24,21 @@
     }
     to {
       transform: translateX(calc(-100% - 32px));
+    }
+  }
+
+  @keyframes moveUpInitial {
+    to {
+      transform: translate3d(0, -105%, 0);
+    }
+  }
+
+  @keyframes moveUpEnd {
+    from {
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
     }
   }
 }
