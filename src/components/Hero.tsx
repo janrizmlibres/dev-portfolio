@@ -39,8 +39,8 @@ const Hero = () => {
       </div>
       <div className="flex justify-between items-center gap-48">
         <motion.p {...animateOnScroll(fadeRight)} className="medium-text pl-4">
-          My goal is to write maintainable, clean and understandable code to
-          process development was enjoyable.
+          My goal is to write maintainable, clean, and understandable code. I
+          don't just build applications, I create <em>solutions</em>.
         </motion.p>
         <motion.h1 {...animateOnScroll(fadeLeft)} className="large-text">
           Developer

@@ -20,8 +20,8 @@ const About = () => {
             {...animateOnScroll(fadeLeft)}
             className="flex-4 text-gray-100 text-xl"
           >
-            Hello! I'm Janriz. I'm a full-stack developer with 2 years of
-            experience.
+            Hello! I'm Janriz. I'm a full-stack developer with more than 1 year
+            of experience.
           </motion.p>
         </div>
 
@@ -69,7 +69,7 @@ const About = () => {
               <img
                 src={profile}
                 alt="Profile Image"
-                className="h-full object-cover hover:scale-115 transition-all duration-300 grayscale"
+                className="h-full object-cover hover:scale-105 transition-all duration-300 grayscale"
               />
             </div>
           </motion.div>

@@ -71,7 +71,7 @@
   }
 
   .subheading {
-    @apply font-fira-code font-semibold;
+    @apply font-fira-code font-semibold text-lg;
   }
 
   .project-entry {
