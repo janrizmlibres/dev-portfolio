@@ -62,10 +62,6 @@
     @apply text-gray-100 hover:text-light-100 transition-colors duration-300;
   }
 
-  .large-text {
-    @apply font-fira-code text-9xl/23 font-semibold;
-  }
-
   .medium-text {
     @apply text-gray-100 text-xl;
   }
@@ -81,6 +77,10 @@
   .tech-item {
     @apply font-fira-code px-4 py-2 border border-gray-200 rounded-full;
   }
+}
+
+@utility large-text {
+  @apply font-fira-code text-9xl/23 font-semibold;
 }
 
 @utility custom-container {

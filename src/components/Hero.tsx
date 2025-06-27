@@ -5,8 +5,11 @@ import { animateOnScroll, fadeLeft, fadeRight } from "../animation";
 const Hero = () => {
   return (
     <section className="custom-container my-20 px-12">
-      <div className="flex justify-between items-end mb-12">
-        <motion.h1 {...animateOnScroll(fadeRight)} className="large-text">
+      <div className="flex justify-between items-end mb-12 gap-8">
+        <motion.h1
+          {...animateOnScroll(fadeRight)}
+          className="font-fira-code text-7xl lg:text-8xl/17 font-semibold xl:large-text"
+        >
           Full-stack
         </motion.h1>
         <motion.div
@@ -15,7 +18,7 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="text-dark-100 text-xl italic font-medium rounded-full h-14 px-30 flex items-center relative overflow-hidden group-hover:text-light-100 group-hover:border border-light-100 transition-all duration-200 delay-200 group-hover:delay-0"
+            className="text-dark-100 text-xl italic font-medium rounded-full h-14 px-22 xl:px-30 flex items-center relative overflow-hidden group-hover:text-light-100 group-hover:border border-light-100 transition-all duration-200 delay-200 group-hover:delay-0"
           >
             <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 delay-200 group-hover:delay-0 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:transform-[translate3d(100%,0,0)]"></span>
             <span className="block relative overflow-hidden">
@@ -37,12 +40,18 @@ const Hero = () => {
           </a>
         </motion.div>
       </div>
-      <div className="flex justify-between items-center gap-48">
-        <motion.p {...animateOnScroll(fadeRight)} className="medium-text pl-4">
+      <div className="flex justify-between items-center gap-8">
+        <motion.p
+          {...animateOnScroll(fadeRight)}
+          className="medium-text pl-4 basis-md"
+        >
           My goal is to write maintainable, clean, and understandable code. I
           don't just build applications, I create <em>solutions</em>.
         </motion.p>
-        <motion.h1 {...animateOnScroll(fadeLeft)} className="large-text">
+        <motion.h1
+          {...animateOnScroll(fadeLeft)}
+          className="font-fira-code text-7xl lg:text-8xl font-semibold xl:large-text"
+        >
           Developer
         </motion.h1>
       </div>

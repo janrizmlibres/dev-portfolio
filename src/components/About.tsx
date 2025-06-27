@@ -79,7 +79,7 @@ const About = () => {
       <section>
         <motion.h3
           {...animateOnScroll(fadeLeft)}
-          className="custom-container large-text text-right my-8 px-12"
+          className="custom-container font-fira-code text-7xl font-semibold lg:large-text text-right my-8 px-12"
         >
           Work
         </motion.h3>

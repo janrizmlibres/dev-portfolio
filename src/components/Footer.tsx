@@ -9,7 +9,10 @@ const Footer = () => {
   return (
     <section className="custom-container px-12 grid grid-cols-6 items-end gap-x-4 gap-y-12 mb-8">
       <div className="col-span-4">
-        <motion.h1 {...animateOnScroll(fadeRight)} className="large-text mb-12">
+        <motion.h1
+          {...animateOnScroll(fadeRight)}
+          className="font-fira-code text-8xl/17 font-semibold lg:large-text mb-12"
+        >
           Janriz
         </motion.h1>
         <div className="flex items-center gap-4">
@@ -23,7 +26,7 @@ const Footer = () => {
           </motion.p>
           <motion.h1
             {...animateOnScroll(fadeLeft)}
-            className="large-text flex-3/4"
+            className="font-fira-code text-8xl/17  font-semibold lg:large-text flex-3/4"
           >
             Libres
           </motion.h1>
