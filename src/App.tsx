@@ -11,9 +11,9 @@ function App() {
       <Header />
       <Hero />
       <Socials />
-      <About />
+      {/* <About />
       <Projects />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

@@ -9,7 +9,7 @@ const Socials = () => {
       <motion.div
         {...animateOnScroll(fadeUp)}
         className={[
-          "mx-auto w-[851.33px] overflow-hidden flex gap-8 relative",
+          "mx-auto lg:w-[851.33px] overflow-hidden flex gap-8 relative",
         ].join(" ")}
       >
         {Array.from({ length: 2 }).map(() => (

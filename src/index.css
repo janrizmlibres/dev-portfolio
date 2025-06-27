@@ -62,16 +62,8 @@
     @apply text-gray-100 hover:text-light-100 transition-colors duration-300;
   }
 
-  .medium-text {
-    @apply text-gray-100 text-xl;
-  }
-
   .subheading {
     @apply font-fira-code font-semibold text-lg;
-  }
-
-  .project-entry {
-    @apply grid grid-cols-6 gap-4;
   }
 
   .tech-item {
@@ -79,8 +71,16 @@
   }
 }
 
+@utility project-entry {
+  @apply grid grid-cols-6 gap-4;
+}
+
 @utility large-text {
   @apply font-fira-code text-9xl/23 font-semibold;
+}
+
+@utility medium-text {
+  @apply text-gray-100 text-xl;
 }
 
 @utility custom-container {

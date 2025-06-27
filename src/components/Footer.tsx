@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="col-span-4">
         <motion.h1
           {...animateOnScroll(fadeRight)}
-          className="font-fira-code text-8xl/17 font-semibold lg:large-text mb-12"
+          className="font-fira-code text-7xl/17 font-semibold lg:large-text mb-12"
         >
           Janriz
         </motion.h1>
@@ -26,7 +26,7 @@ const Footer = () => {
           </motion.p>
           <motion.h1
             {...animateOnScroll(fadeLeft)}
-            className="font-fira-code text-8xl/17  font-semibold lg:large-text flex-3/4"
+            className="font-fira-code text-7xl/17 font-semibold lg:large-text flex-3/4"
           >
             Libres
           </motion.h1>
