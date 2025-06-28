@@ -61,22 +61,22 @@ const Hero = () => {
       >
         <a
           href="#projects"
-          className="text-dark-100 text-xl italic font-medium rounded-full h-12 lg:h-14 px-18 sm:flex-1 sm:justify-center flex items-center relative overflow-hidden group-hover:text-light-100 group-hover:border border-light-100 transition-all duration-200 delay-200 group-hover:delay-0"
+          className="text-dark-100 text-xl italic font-medium rounded-full h-12 lg:h-14 px-18 sm:flex-1 sm:justify-center flex items-center relative overflow-hidden group-hover:text-light-100 group-active:text-light-100 group-hover:border group-active:border border-light-100 transition-all duration-200 delay-200 group-hover:delay-0 group-active:delay-0"
         >
-          <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 delay-200 group-hover:delay-0 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:transform-[translate3d(100%,0,0)]"></span>
+          <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 delay-200 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:delay-0 group-hover:transform-[translate3d(100%,0,0)] group-active:delay-0 group-active:transform-[translate3d(100%,0,0)]"></span>
           <span className="block relative overflow-hidden">
-            <span className="block relative group-hover:animate-btn-hover">
+            <span className="block relative group-hover:animate-btn-hover group-active:animate-btn-hover">
               Projects
             </span>
           </span>
         </a>
         <a
           href="#projects"
-          className="text-2xl text-dark-100 bg-dark-100 rounded-full size-12 lg:size-14 flex items-center justify-center relative overflow-hidden group-hover:text-light-100 group-hover:border border-light-100 transition-all duration-200 group-hover:delay-200"
+          className="text-2xl text-dark-100 bg-dark-100 rounded-full size-12 lg:size-14 flex items-center justify-center relative overflow-hidden group-hover:text-light-100 group-hover:border group-active:text-light-100 group-active:border border-light-100 transition-all duration-200 group-hover:delay-200 group-active:delay-200"
         >
-          <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 group-hover:delay-200 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:transform-[translate3d(100%,0,0)]"></span>
+          <span className="absolute inset-0 bg-light-100 rounded-full transition-transform duration-200 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:delay-200 group-active:delay-200 group-hover:transform-[translate3d(100%,0,0)] group-active:transform-[translate3d(100%,0,0)]"></span>
           <span className="block relative overflow-hidden">
-            <span className="block relative delay-200 group-hover:animate-btn-hover-delayed">
+            <span className="block relative delay-200 group-hover:animate-btn-hover-delayed group-active:animate-btn-hover-delayed">
               <ArrowRightIcon size={24} />
             </span>
           </span>
