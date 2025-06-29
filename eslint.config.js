@@ -3,6 +3,7 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -19,12 +20,13 @@ const compat = new FlatCompat({
 });
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist", "components/ui/**/*"] },
   {
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      ...compat.extends("standard", "prettier"),
+      ...compat.extends("standard"),
+      eslintConfigPrettier,
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
