@@ -13,7 +13,7 @@ function App() {
       <Socials />
       <About />
       {/* <Projects /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -1,24 +1,25 @@
+import { motion } from "motion/react";
+
+import { animateOnScroll, fadeLeft, fadeRight, fadeUp } from "../animation";
+import { socialsPlusEmail } from "../data";
 import LinksHolder from "./shared/LinksHolder";
 import SocialTag from "./shared/SocialTag";
 import TechToolsPanel from "./shared/TechToolsPanel";
-import { socialsPlusEmail } from "../data";
-import { motion } from "motion/react";
-import { animateOnScroll, fadeLeft, fadeRight, fadeUp } from "../animation";
 
 const Footer = () => {
   return (
-    <section className="custom-container px-12 grid grid-cols-6 items-end gap-x-4 gap-y-12 mb-8">
-      <div className="col-span-4">
+    <section className="custom-container mb-8 grid grid-cols-2 items-end gap-x-4 gap-y-8 px-4 sm:px-8 md:gap-y-12 lg:grid-cols-6 lg:px-12">
+      <div className="col-span-6 max-md:row-start-2 md:col-span-4">
         <motion.h1
           {...animateOnScroll(fadeRight)}
-          className="font-fira-code text-7xl/17 font-semibold lg:large-text mb-12"
+          className="mb-4 font-fira-code text-5xl font-semibold md:mb-12 md:text-8xl/17 lg:large-text"
         >
           Janriz
         </motion.h1>
         <div className="flex items-center gap-4">
           <motion.p
             {...animateOnScroll(fadeRight)}
-            className="medium-text flex-1/4"
+            className="flex-1/4 text-xs text-gray-100 md:medium-text"
           >
             Full-stack
             <br />
@@ -26,29 +27,29 @@ const Footer = () => {
           </motion.p>
           <motion.h1
             {...animateOnScroll(fadeLeft)}
-            className="font-fira-code text-7xl/17 font-semibold lg:large-text flex-3/4"
+            className="flex-1/1 font-fira-code text-5xl font-semibold md:flex-3/4 md:text-8xl/17 lg:large-text"
           >
             Libres
           </motion.h1>
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-6 md:col-span-2">
         <motion.h2
           {...animateOnScroll(fadeLeft)}
-          className="subheading text-2xl pl-2 mb-6"
+          className="subheading mb-6 pl-2 text-2xl"
         >
           &hellip; /Contacts &hellip;
         </motion.h2>
 
-        <motion.div {...animateOnScroll(fadeUp)}>
+        <motion.div {...animateOnScroll(fadeUp)} className="max-w-3/4 px-2">
           <LinksHolder
             links={[{ name: "Main" }, { name: "About" }, { name: "Projects" }]}
-            className="justify-between mb-6"
+            className="mb-6 justify-between"
           />
         </motion.div>
 
-        <TechToolsPanel title="Site">
+        <TechToolsPanel title="Site" className="min-w-3/4 max-md:max-w-fit">
           Developed by ME /<br />
           Designed by Taisia /<br />
           Powered by React
@@ -56,10 +57,19 @@ const Footer = () => {
       </div>
 
       {socialsPlusEmail.map((social) => (
-        <motion.div {...animateOnScroll(fadeUp)}>
+        <motion.div {...animateOnScroll(fadeUp)} className="max-lg:hidden">
           <SocialTag key={social.name} social={social} />
         </motion.div>
       ))}
+
+      <motion.div
+        {...animateOnScroll(fadeUp)}
+        className="col-span-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden"
+      >
+        {socialsPlusEmail.map((social) => (
+          <SocialTag key={social.name} social={social} />
+        ))}
+      </motion.div>
     </section>
   );
 };
