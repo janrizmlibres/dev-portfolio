@@ -1,31 +1,32 @@
-import TechToolsPanel from "./shared/TechToolsPanel";
-import ButtonPrompt from "./shared/ButtonPrompt";
-import WorkPanel from "./shared/WorkPanel";
 import { motion } from "motion/react";
+
 import { animateOnScroll, fadeLeft, fadeRight } from "../animation";
+import ButtonPrompt from "./shared/ButtonPrompt";
+import TechToolsPanel from "./shared/TechToolsPanel";
+import WorkPanel from "./shared/WorkPanel";
 import profile from "../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section className="mt-48 mb-32 ovderflow-x-hidden" id="about">
+    <section className="ovderflow-x-hidden mt-48 mb-32" id="about">
       <section className="custom-container px-4 sm:px-8 lg:px-12">
-        <div className="flex gap-y-8 flex-col md:flex-row items-start mb-24">
+        <div className="mb-24 flex flex-col items-start gap-y-8 md:flex-row">
           <motion.h2
             {...animateOnScroll(fadeRight)}
-            className="flex-3 subheading"
+            className="subheading flex-3"
           >
             &hellip; /About me &hellip;
           </motion.h2>
           <motion.p
             {...animateOnScroll(fadeLeft)}
-            className="flex-4 text-gray-100 text-xl"
+            className="flex-4 text-xl text-gray-100"
           >
             Hello! I'm Janriz. I'm a <em>full-stack developer</em> with more
             than <em>1 year</em> of experience.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-md:justify-items-center">
+        <div className="grid grid-cols-1 gap-4 max-md:justify-items-center md:grid-cols-4">
           <TechToolsPanel
             className="max-md:row-2 md:col-span-2"
             title="Front-end"
@@ -35,18 +36,18 @@ const About = () => {
             / Vitest / Mocha / Chai / Pinia
           </TechToolsPanel>
 
-          <TechToolsPanel className="max-md:hidden row-2" title="Styles">
+          <TechToolsPanel className="row-2 max-md:hidden" title="Styles">
             SCSS / SASS / Tailwind / Shadcn / CSS Modules
           </TechToolsPanel>
 
           <motion.div
             {...animateOnScroll(fadeLeft)}
-            className="row-2 hidden md:flex items-center justify-center"
+            className="row-2 hidden items-center justify-center md:flex"
           >
             <ButtonPrompt iconName="Github" />
           </motion.div>
 
-          <div className="flex row-3 md:hidden w-full">
+          <div className="row-3 flex w-full md:hidden">
             <TechToolsPanel className="flex-5" title="Styles">
               SCSS / SASS / Tailwind / Shadcn / CSS Modules
             </TechToolsPanel>
@@ -60,7 +61,7 @@ const About = () => {
           </div>
 
           <TechToolsPanel
-            className="row-4 md:row-3 md:col-span-2"
+            className="row-4 md:col-span-2 md:row-3"
             title="Back-end"
           >
             PostgreSQL / MySQL / MS SQL Server / Node.js / Express / Prisma /
@@ -69,7 +70,7 @@ const About = () => {
 
           <motion.div
             {...animateOnScroll(fadeRight)}
-            className="row-4 hidden md:flex items-center text-gray-100 w-9/10"
+            className="row-4 hidden w-9/10 items-center text-gray-100 md:flex"
           >
             <p>
               Some of my <em>favorite technologies, topics, or tools</em> that I
@@ -77,11 +78,11 @@ const About = () => {
             </p>
           </motion.div>
 
-          <TechToolsPanel className="max-md:hidden row-4 col-2" title="DevOps">
+          <TechToolsPanel className="col-2 row-4 max-md:hidden" title="DevOps">
             Docker / GitHub Actions (CI/CD) / Bash
           </TechToolsPanel>
 
-          <div className="flex row-5 gap-4 md:hidden">
+          <div className="row-5 flex gap-4 md:hidden">
             <motion.div
               {...animateOnScroll(fadeRight)}
               className="flex flex-1 items-center text-gray-100"
@@ -99,16 +100,16 @@ const About = () => {
 
           <motion.div
             {...animateOnScroll(fadeLeft)}
-            className="max-md:hidden row-start-1 md:col-start-3 md:col-span-2 md:row-span-3"
+            className="row-start-1 max-md:hidden md:col-span-2 md:col-start-3 md:row-span-3"
           >
-            <div className="max-md:w-full max-md:h-64 w-9/10 lg:w-2/3 h-full ml-auto rounded-4xl overflow-hidden bg-profile bg-center bg-size-[auto_120%] grayscale hover:bg-size-[auto_130%] active:bg-size-[auto_130%] transition-all duration-300"></div>
+            <div className="ml-auto h-full w-9/10 overflow-hidden rounded-4xl bg-profile bg-size-[auto_120%] bg-center grayscale transition-all duration-300 hover:bg-size-[auto_130%] active:bg-size-[auto_130%] max-md:h-64 max-md:w-full lg:w-2/3"></div>
           </motion.div>
 
-          <motion.div className="overflow-hidden rounded-4xl max-w-sm md:hidden">
+          <motion.div className="max-w-sm overflow-hidden rounded-4xl md:hidden">
             <img
               src={profile}
               alt="Profile Image"
-              className="object-cover hover:scale-110 active:scale-110 transition-transform duration-300 grayscale"
+              className="object-cover grayscale transition-transform duration-300 hover:scale-110 active:scale-110"
             />
           </motion.div>
         </div>
@@ -117,7 +118,7 @@ const About = () => {
       <section>
         <motion.h3
           {...animateOnScroll(fadeLeft)}
-          className="custom-container font-fira-code text-5xl sm:text-7xl/12 font-semibold lg:large-text text-right mt-8 mb-4 sm:my-8 px-4 sm:px-8 lg:px-12"
+          className="custom-container mt-8 mb-4 px-4 text-right font-fira-code text-5xl font-semibold sm:my-8 sm:px-8 sm:text-7xl/12 lg:px-12 lg:large-text"
         >
           Work
         </motion.h3>
@@ -140,7 +141,7 @@ const About = () => {
 
         <motion.div
           {...animateOnScroll(fadeLeft)}
-          className="custom-container px-4 sm:px-8 lg:px-12 text-right mt-6 text-xl"
+          className="custom-container mt-6 px-4 text-right text-xl sm:px-8 lg:px-12"
         >
           <p className="text-gray-100">Work experience</p>
           <p className="italic">1 year 1 month</p>
