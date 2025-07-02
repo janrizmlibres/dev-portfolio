@@ -22,6 +22,7 @@ const Header = () => {
           <LinksHolder
             links={[
               { name: "About" },
+              { name: "Work" },
               { name: "Projects" },
               { name: "Contacts" },
             ]}

@@ -13,6 +13,15 @@
 
   --background-image-profile: url("./assets/profile.jpg");
 
+  --background-image-project-one-one: url("./assets/project-one/one.jpg");
+  --background-image-project-one-two: url("./assets/project-one/two.jpg");
+  --background-image-project-one-three: url("./assets/project-one/three.jpg");
+  --background-image-project-one-four: url("./assets/project-one/four.jpg");
+
+  --background-image-project-two-one: url("./assets/project-two/one.jpg");
+  --background-image-project-two-two: url("./assets/project-two/two.jpg");
+  --background-image-project-two-three: url("./assets/project-two/three.jpg");
+
   --ease-hover-bg: cubic-bezier(0.7, 0, 0.2, 1);
 
   --animate-infinite-slide: slide 25s linear infinite;
@@ -73,18 +82,10 @@
   @apply mx-auto max-w-[90rem];
 }
 
-@utility clip-path-top {
-  clip-path: inset(0 0 calc(50% + 0.5rem) 0 round 2rem 2rem 2rem 0);
+@utility project-grid {
+  @apply grid grid-cols-5 grid-rows-4 gap-4 lg:grid-cols-6;
 }
 
-@utility clip-path-bottom {
-  clip-path: inset(
-    calc(50% - 1.5rem) calc(33.33% + 0.33rem) 0 0 round 0 0 2rem 2rem
-  );
-}
-
-@utility clip-path-center {
-  clip-path: inset(
-    calc(50% - 0.6rem) 20% 25% calc(100% - (33.33% + 0.33rem) - 0.1rem)
-  );
+@utility clip-path-* {
+  clip-path: --value([*]);
 }

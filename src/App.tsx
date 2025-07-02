@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Socials />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Footer />
     </>
   );

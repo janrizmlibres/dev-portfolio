@@ -48,13 +48,13 @@ const About = () => {
           </motion.div>
 
           <div className="row-3 flex w-full md:hidden">
-            <TechToolsPanel className="flex-5" title="Styles">
+            <TechToolsPanel className="flex-1" title="Styles">
               SCSS / SASS / Tailwind / Shadcn / CSS Modules
             </TechToolsPanel>
 
             <motion.div
               {...animateOnScroll(fadeLeft)}
-              className="flex flex-4 items-center justify-center"
+              className="flex flex-1 items-center justify-center"
             >
               <ButtonPrompt iconName="Github" />
             </motion.div>
@@ -93,7 +93,7 @@ const About = () => {
               </p>
             </motion.div>
 
-            <TechToolsPanel className="flex-3" title="DevOps">
+            <TechToolsPanel className="flex-1" title="DevOps">
               Docker / GitHub Actions (CI/CD) / Bash
             </TechToolsPanel>
           </div>
@@ -115,7 +115,9 @@ const About = () => {
         </div>
       </section>
 
-      <section>
+      <section className="relative">
+        <div id="work" className="absolute top-0 -mt-8"></div>
+
         <motion.h3
           {...animateOnScroll(fadeLeft)}
           className="custom-container mt-8 mb-4 px-4 text-right large-text text-5xl sm:my-8 sm:px-8 sm:text-7xl/12 lg:px-12 lg:text-9xl/23"

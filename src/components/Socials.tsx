@@ -1,7 +1,8 @@
-import SocialTag from "./shared/SocialTag";
-import { socials } from "../data";
 import { motion } from "motion/react";
+
 import { animateOnScroll, fadeUp } from "../animation";
+import { socials } from "../data";
+import SocialTag from "./shared/SocialTag";
 
 const Socials = () => {
   return (
@@ -9,11 +10,11 @@ const Socials = () => {
       <motion.div
         {...animateOnScroll(fadeUp)}
         className={[
-          "mx-auto lg:w-[851.33px] overflow-hidden flex gap-8 relative",
+          "relative mx-auto flex gap-8 overflow-hidden lg:w-[851.33px]",
         ].join(" ")}
       >
         {Array.from({ length: 2 }).map(() => (
-          <div className="flex gap-8 animate-infinite-slide">
+          <div className="flex animate-infinite-slide gap-8">
             {socials.map((social) => (
               <SocialTag key={social.name} social={social} />
             ))}

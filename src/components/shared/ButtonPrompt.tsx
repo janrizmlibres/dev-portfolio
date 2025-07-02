@@ -1,21 +1,26 @@
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
-import { getIcon } from "../../utils";
+
+import { cn, getIcon } from "../../utils";
 interface Props {
   iconName: string;
+  href?: string;
+  className?: string;
 }
 
-const ButtonPrompt = ({ iconName }: Props) => {
+const ButtonPrompt = ({ iconName, href = "#", className }: Props) => {
   return (
-    <div className="group flex w-fit">
+    <div className={cn("group flex w-fit", className)}>
       <a
-        href="#"
-        className="group-hover:translate-x-9 transition-transform duration-300 size-14 border-1 border-gray-100 rounded-full flex items-center justify-center"
+        href={href}
+        className="flex size-14 items-center justify-center rounded-full border-1 border-gray-100 transition-transform duration-300 group-hover:translate-x-9"
+        target="_blank"
       >
         {getIcon(iconName, 24, "fill")}
       </a>
       <a
-        href="#"
-        className="group-hover:-translate-x-9 transition-transform duration-300 bg-light-100 text-dark-100 rounded-full size-14 -ml-5 flex items-center justify-center"
+        href={href}
+        className="-ml-5 flex size-14 items-center justify-center rounded-full bg-light-100 text-dark-100 transition-transform duration-300 group-hover:-translate-x-9"
+        target="_blank"
       >
         <ArrowUpRightIcon size={24} />
       </a>

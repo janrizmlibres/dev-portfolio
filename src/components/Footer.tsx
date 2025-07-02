@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="col-span-6 md:col-span-2">
+      <div id="contacts" className="col-span-6 md:col-span-2">
         <motion.h2
           {...animateOnScroll(fadeLeft)}
           className="mb-6 pl-2 subheading text-2xl"
@@ -44,7 +44,12 @@ const Footer = () => {
 
         <motion.div {...animateOnScroll(fadeUp)} className="max-w-3/4 px-2">
           <LinksHolder
-            links={[{ name: "Main" }, { name: "About" }, { name: "Projects" }]}
+            links={[
+              { name: "Main" },
+              { name: "About" },
+              { name: "Work" },
+              { name: "Projects" },
+            ]}
             className="mb-6 justify-between"
           />
         </motion.div>
