@@ -24,6 +24,8 @@
 
   --ease-hover-bg: cubic-bezier(0.7, 0, 0.2, 1);
 
+  --shadow-sticky: 0 12px 32px rgba(255, 255, 255, 0.03);
+
   --animate-infinite-slide: slide 25s linear infinite;
 
   --animate-btn-hover:
@@ -70,6 +72,18 @@
   }
 }
 
+@utility mobile-nav {
+  @apply fixed top-0 left-0 z-2 flex h-screen w-full items-center justify-center bg-dark-100/90 backdrop-blur-xs transition-all duration-500 ease-in;
+}
+
+@utility nav-open {
+  @apply pointer-events-auto visible translate-x-0 opacity-100;
+}
+
+@utility nav-close {
+  @apply pointer-events-none invisible translate-x-full opacity-0;
+}
+
 @utility subheading {
   @apply font-fira-code text-lg font-semibold;
 }
@@ -79,7 +93,7 @@
 }
 
 @utility custom-container {
-  @apply mx-auto max-w-[90rem];
+  @apply mx-auto max-w-[90rem] px-4 sm:px-8 lg:px-12;
 }
 
 @utility project-grid {

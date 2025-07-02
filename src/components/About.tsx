@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import { animateOnScroll, fadeLeft, fadeRight } from "../animation";
+import { animateOnScroll, fadeLeft, fadeRight, fadeUp } from "../animation";
 import ButtonPrompt from "./shared/ButtonPrompt";
 import TechToolsPanel from "./shared/TechToolsPanel";
 import WorkPanel from "./shared/WorkPanel";
@@ -119,7 +119,7 @@ const About = () => {
         <div id="work" className="absolute top-0 -mt-8"></div>
 
         <motion.h3
-          {...animateOnScroll(fadeLeft)}
+          {...animateOnScroll(fadeUp)}
           className="custom-container mt-8 mb-4 px-4 text-right large-text text-5xl sm:my-8 sm:px-8 sm:text-7xl/12 lg:px-12 lg:text-9xl/23"
         >
           Work
@@ -142,7 +142,7 @@ const About = () => {
         />
 
         <motion.div
-          {...animateOnScroll(fadeLeft)}
+          {...animateOnScroll(fadeUp)}
           className="custom-container mt-6 px-4 text-right text-xl sm:px-8 lg:px-12"
         >
           <p className="text-gray-100">Work experience</p>

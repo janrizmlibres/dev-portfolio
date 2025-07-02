@@ -58,7 +58,7 @@ const Projects = () => {
             className="col-start-2 row-start-3 rounded-4xl bg-project-one-four bg-size-[auto_120%] bg-left transition-all duration-300 hover:bg-size-[auto_130%] active:bg-size-[auto_130%] md:col-start-4"
           ></motion.div>
 
-          <div className="col-span-3 row-start-4 md:col-span-2 md:row-span-3 md:row-start-1">
+          <div className="col-span-3 row-start-4 max-md:mb-12 max-md:h-fit md:col-span-2 md:row-span-3 md:row-start-1">
             <ProjectDetails
               title="DevFlow"
               href="https://github.com/janrizmlibres/devflow-clone-app"
@@ -132,6 +132,7 @@ const Projects = () => {
             <ProjectDetails
               title="PulseVR"
               href="https://github.com/janrizmlibres/pulse-vr"
+              enterDirection="left"
               tools={["TypeScript", "React.js", "Tailwind"]}
             >
               <em>PulseVR</em> is a landing page website for a fictional startup

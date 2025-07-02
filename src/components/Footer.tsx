@@ -8,73 +8,75 @@ import TechToolsPanel from "./shared/TechToolsPanel";
 
 const Footer = () => {
   return (
-    <section className="custom-container mb-8 grid grid-cols-2 items-end gap-x-4 gap-y-8 px-4 sm:px-8 md:gap-y-12 lg:grid-cols-6 lg:px-12">
-      <div className="col-span-6 max-md:row-start-2 md:col-span-4">
-        <motion.h1
-          {...animateOnScroll(fadeRight)}
-          className="mb-4 large-text text-5xl md:mb-12 md:text-8xl/17 lg:text-9xl/23"
-        >
-          Janriz
-        </motion.h1>
-        <div className="flex items-center gap-4">
-          <motion.p
-            {...animateOnScroll(fadeRight)}
-            className="flex-1/4 text-xs text-gray-100 md:text-xl"
-          >
-            Full-stack
-            <br />
-            developer
-          </motion.p>
+    <section className="mb-8">
+      <div className="custom-container grid grid-cols-2 items-end gap-x-4 gap-y-8 md:gap-y-12 lg:grid-cols-6">
+        <div className="col-span-6 max-md:row-start-2 md:col-span-4">
           <motion.h1
-            {...animateOnScroll(fadeLeft)}
-            className="flex-1/1 large-text text-5xl md:flex-3/4 md:text-8xl/17 lg:text-9xl/23"
+            {...animateOnScroll(fadeRight)}
+            className="mb-4 large-text text-5xl md:mb-12 md:text-8xl/17 lg:text-9xl/23"
           >
-            Libres
+            Janriz
           </motion.h1>
+          <div className="flex items-center gap-4">
+            <motion.p
+              {...animateOnScroll(fadeRight)}
+              className="flex-1/4 text-xs text-gray-100 md:text-xl"
+            >
+              Full-stack
+              <br />
+              developer
+            </motion.p>
+            <motion.h1
+              {...animateOnScroll(fadeLeft)}
+              className="flex-1/1 large-text text-5xl md:flex-3/4 md:text-8xl/17 lg:text-9xl/23"
+            >
+              Libres
+            </motion.h1>
+          </div>
         </div>
-      </div>
 
-      <div id="contacts" className="col-span-6 md:col-span-2">
-        <motion.h2
-          {...animateOnScroll(fadeLeft)}
-          className="mb-6 pl-2 subheading text-2xl"
-        >
-          &hellip; /Contacts &hellip;
-        </motion.h2>
+        <div id="contacts" className="col-span-6 md:col-span-2">
+          <motion.h2
+            {...animateOnScroll(fadeUp)}
+            className="mb-6 pl-2 subheading text-2xl"
+          >
+            &hellip; /Contacts &hellip;
+          </motion.h2>
 
-        <motion.div {...animateOnScroll(fadeUp)} className="max-w-3/4 px-2">
-          <LinksHolder
-            links={[
-              { name: "Main" },
-              { name: "About" },
-              { name: "Work" },
-              { name: "Projects" },
-            ]}
-            className="mb-6 justify-between"
-          />
-        </motion.div>
+          <motion.div {...animateOnScroll(fadeUp)} className="max-w-3/4 px-2">
+            <LinksHolder
+              links={[
+                { name: "Main" },
+                { name: "About" },
+                { name: "Work" },
+                { name: "Projects" },
+              ]}
+              className="mb-6 justify-between"
+            />
+          </motion.div>
 
-        <TechToolsPanel title="Site" className="min-w-3/4 max-md:max-w-fit">
-          Developed by ME /<br />
-          Designed by Taisia /<br />
-          Powered by React
-        </TechToolsPanel>
-      </div>
+          <TechToolsPanel title="Site" className="min-w-3/4 max-md:max-w-fit">
+            Developed by ME /<br />
+            Designed by Taisia /<br />
+            Powered by React
+          </TechToolsPanel>
+        </div>
 
-      {socialsPlusEmail.map((social) => (
-        <motion.div {...animateOnScroll(fadeUp)} className="max-lg:hidden">
-          <SocialTag key={social.name} social={social} />
-        </motion.div>
-      ))}
-
-      <motion.div
-        {...animateOnScroll(fadeUp)}
-        className="col-span-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden"
-      >
         {socialsPlusEmail.map((social) => (
-          <SocialTag key={social.name} social={social} />
+          <motion.div {...animateOnScroll(fadeUp)} className="max-lg:hidden">
+            <SocialTag key={social.name} social={social} />
+          </motion.div>
         ))}
-      </motion.div>
+
+        <motion.div
+          {...animateOnScroll(fadeUp)}
+          className="col-span-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden"
+        >
+          {socialsPlusEmail.map((social) => (
+            <SocialTag key={social.name} social={social} />
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };

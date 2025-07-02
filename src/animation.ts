@@ -2,23 +2,23 @@ import type { Variants } from "motion";
 import type { MotionProps } from "motion/react";
 
 export const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, transform: "translateY(50px)" },
+  visible: { opacity: 1, transform: "translateY(0px)" },
 };
 
 export const fadeDown = {
-  hidden: { opacity: 0, y: -50 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, transform: "translateY(-50px)" },
+  visible: { opacity: 1, transform: "translateY(0px)" },
 };
 
 export const fadeLeft = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, transform: "translateX(50px)" },
+  visible: { opacity: 1, transform: "translateX(0px)" },
 };
 
 export const fadeRight = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, transform: "translateX(-50px)" },
+  visible: { opacity: 1, transform: "translateX(0px)" },
 };
 
 export const animateOnScroll = (variant: Variants): MotionProps => ({
