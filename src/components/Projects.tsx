@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import { animateOnScroll, fadeRight, fadeUp } from "../animation";
+import { animateOnScroll, fadeRight } from "../animation";
 import { cn } from "../utils";
 import ProjectDetails from "./shared/ProjectDetails";
 import ProjectPanel from "./shared/ProjectPanel";
@@ -29,7 +29,10 @@ const Projects = () => {
               <WindowPane
                 href={href}
                 className="col-span-3 row-span-2"
-                backgroundClasses="bg-project-one-three bg-size-[auto_100%] bg-left group-hover:bg-size-[auto_105%] group-active:bg-size-[auto_105%]"
+                backgroundClasses={cn(
+                  "bg-project-one-three bg-size-[auto_100%] bg-left",
+                  "group-hover:bg-size-[auto_105%] group-active:bg-size-[auto_105%]"
+                )}
                 segmentClassesArray={[
                   "clip-path-[inset(0_0_calc(50%+0.5rem)_0_round_2rem_2rem_2rem_0)]",
                   "clip-path-[inset(calc(50%-1.5rem)_calc(33.33%+0.33rem)_0_0_round_0_0_2rem_2rem)]",
@@ -85,10 +88,19 @@ const Projects = () => {
               <WindowPane
                 href={href}
                 className="col-span-4 row-span-2"
-                backgroundClasses="bg-project-two-three lg:bg-size-[100%] bg-size-[auto_100%] bg-center group-hover:lg:bg-size-[105%] group-active:lg:bg-size-[105%] group-hover:bg-size-[auto_105%] group-active:bg-size-[auto_105%]"
+                backgroundClasses={cn(
+                  "bg-project-two-three lg:bg-size-[100%] bg-size-[auto_100%] bg-center group-hover:lg:bg-size-[105%] ",
+                  "group-active:lg:bg-size-[105%] group-hover:bg-size-[auto_105%] group-active:bg-size-[auto_105%]"
+                )}
                 segmentClassesArray={[
-                  "lg:clip-path-[inset(0_0_calc(50%+0.5rem)_calc(25%+0.33rem)_round_2rem_2rem_2rem_0)] clip-path-[inset(0_0_calc(50%-0.6rem)_calc(33.33%+0.33rem)_round_2rem_2rem_0_0)]",
-                  "lg:clip-path-[inset(calc(50%+0.5rem)_calc(25%+0.33rem)_0_0_round_2rem_0_2rem_2rem)] clip-path-[inset(calc(50%+0.5rem)_0_0_0_round_2rem_0_2rem_2rem)]",
+                  cn(
+                    "lg:clip-path-[inset(0_0_calc(50%+0.5rem)_calc(25%+0.33rem)_round_2rem_2rem_2rem_0)]",
+                    "clip-path-[inset(0_0_calc(50%-0.6rem)_calc(33.33%+0.33rem)_round_2rem_2rem_0_0)]"
+                  ),
+                  cn(
+                    "lg:clip-path-[inset(calc(50%+0.5rem)_calc(25%+0.33rem)_0_0_round_2rem_0_2rem_2rem)]",
+                    "clip-path-[inset(calc(50%+0.5rem)_0_0_0_round_2rem_0_2rem_2rem)]"
+                  ),
                   "clip-path-[inset(30%_10%_30%_10%)]",
                 ]}
                 concealerClassesArray={[
