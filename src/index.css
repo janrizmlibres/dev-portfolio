@@ -13,7 +13,10 @@
 
   --background-image-profile: url("./assets/profile.jpg");
 
+  --ease-hover-bg: cubic-bezier(0.7, 0, 0.2, 1);
+
   --animate-infinite-slide: slide 25s linear infinite;
+
   --animate-btn-hover:
     moveUpInitial 0.2s forwards, moveUpEnd 0.2s forwards 0.2s;
   --animate-btn-hover-delayed:
