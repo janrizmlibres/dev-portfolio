@@ -117,8 +117,8 @@ const Projects = () => {
             </>
           )}
         >
-          <div className="grid grid-cols-2 gap-4">
-            <div className="aspect-square"></div>
+          <div className="grid-cols-2 gap-4 md:grid">
+            <div className="aspect-square max-md:hidden"></div>
 
             <ProjectDetails
               title="PulseVR"
