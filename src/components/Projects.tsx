@@ -51,13 +51,13 @@ const Projects = () => {
 
               <WindowPane
                 href={href}
-                className="col-start-4 aspect-square max-lg:hidden"
+                className="col-start-4 max-lg:hidden"
                 backgroundClasses="bg-project-one-one bg-size-[auto_120%] bg-right hover:bg-size-[auto_130%] active:bg-size-[auto_130%]"
               />
 
               <WindowPane
                 href={href}
-                className="col-start-2 row-start-3"
+                className="col-start-2 row-start-3 aspect-square"
                 backgroundClasses="bg-project-one-four bg-size-[auto_120%] bg-left hover:bg-size-[auto_130%] active:bg-size-[auto_130%]"
               />
             </>
@@ -87,7 +87,7 @@ const Projects = () => {
 
               <WindowPane
                 href={href}
-                className="col-span-4 row-span-2"
+                className="col-span-3 row-span-2 lg:col-span-4"
                 backgroundClasses={cn(
                   "bg-project-two-three lg:bg-size-[100%] bg-size-[auto_100%] bg-center group-hover:lg:bg-size-[105%] ",
                   "group-active:lg:bg-size-[105%] group-hover:bg-size-[auto_105%] group-active:bg-size-[auto_105%]"
