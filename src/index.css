@@ -14,9 +14,10 @@
   --background-image-profile: url("./assets/profile.jpg");
 
   --animate-infinite-slide: slide 25s linear infinite;
-  --animate-btn-hover: moveUpInitial 0.2s forwards, moveUpEnd 0.2s forwards 0.2s;
-  --animate-btn-hover-delayed: moveUpInitial 0.2s forwards 0.3s,
-    moveUpEnd 0.2s forwards 0.5s;
+  --animate-btn-hover:
+    moveUpInitial 0.2s forwards, moveUpEnd 0.2s forwards 0.2s;
+  --animate-btn-hover-delayed:
+    moveUpInitial 0.2s forwards 0.3s, moveUpEnd 0.2s forwards 0.5s;
 
   @keyframes slide {
     from {
@@ -49,7 +50,7 @@
   }
 
   body {
-    @apply font-open-sans text-light-100 bg-dark-100;
+    @apply bg-dark-100 font-open-sans text-light-100;
   }
 
   em {
@@ -57,34 +58,20 @@
   }
 }
 
-@layer components {
-  .link-item {
-    @apply text-gray-100 hover:text-light-100 transition-colors duration-300;
-  }
-
-  .subheading {
-    @apply font-fira-code font-semibold text-lg;
-  }
-
-  .tech-item {
-    @apply font-fira-code px-4 py-2 border border-gray-200 rounded-full;
-  }
+@utility subheading {
+  @apply font-fira-code text-lg font-semibold;
 }
 
-@utility project-entry {
-  @apply grid grid-cols-6 gap-4;
+@utility tech-item {
+  @apply rounded-full border border-gray-200 px-4 py-2 font-fira-code;
 }
 
 @utility large-text {
-  @apply font-fira-code text-9xl/23 font-semibold;
-}
-
-@utility medium-text {
-  @apply text-gray-100 text-xl;
+  @apply font-fira-code font-semibold;
 }
 
 @utility custom-container {
-  @apply max-w-[90rem] mx-auto;
+  @apply mx-auto max-w-[90rem];
 }
 
 @utility clip-path-top {

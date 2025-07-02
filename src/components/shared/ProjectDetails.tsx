@@ -1,6 +1,7 @@
-import { animateOnScroll, fadeRight } from "../../animation";
-import ButtonPrompt from "./ButtonPrompt";
 import { motion } from "motion/react";
+
+import ButtonPrompt from "./ButtonPrompt";
+import { animateOnScroll, fadeRight } from "../../animation";
 
 interface Props {
   title: string;
@@ -14,7 +15,7 @@ const ProjectDetails = ({ title, tools, children }: Props) => {
       <motion.h3 {...animateOnScroll(fadeRight)} className="mb-6 text-2xl">
         {title}
       </motion.h3>
-      <div className="flex flex-wrap gap-x-4 gap-y-3 mb-12">
+      <div className="mb-12 flex flex-wrap gap-x-4 gap-y-3">
         {tools.map((tool, i) => (
           <motion.div
             {...animateOnScroll(fadeRight)}
@@ -26,7 +27,7 @@ const ProjectDetails = ({ title, tools, children }: Props) => {
         ))}
       </div>
 
-      <motion.p {...animateOnScroll(fadeRight)} className="text-gray-100 mb-12">
+      <motion.p {...animateOnScroll(fadeRight)} className="mb-12 text-gray-100">
         {children}
       </motion.p>
 

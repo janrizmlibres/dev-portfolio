@@ -13,7 +13,7 @@ const About = () => {
         <div className="mb-24 flex flex-col items-start gap-y-8 md:flex-row">
           <motion.h2
             {...animateOnScroll(fadeRight)}
-            className="subheading flex-3"
+            className="flex-3 subheading"
           >
             &hellip; /About me &hellip;
           </motion.h2>
@@ -118,7 +118,7 @@ const About = () => {
       <section>
         <motion.h3
           {...animateOnScroll(fadeLeft)}
-          className="custom-container mt-8 mb-4 px-4 text-right font-fira-code text-5xl font-semibold sm:my-8 sm:px-8 sm:text-7xl/12 lg:px-12 lg:large-text"
+          className="custom-container mt-8 mb-4 px-4 text-right large-text text-5xl sm:my-8 sm:px-8 sm:text-7xl/12 lg:px-12 lg:text-9xl/23"
         >
           Work
         </motion.h3>

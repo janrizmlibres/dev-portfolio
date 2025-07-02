@@ -12,14 +12,14 @@ const Footer = () => {
       <div className="col-span-6 max-md:row-start-2 md:col-span-4">
         <motion.h1
           {...animateOnScroll(fadeRight)}
-          className="mb-4 font-fira-code text-5xl font-semibold md:mb-12 md:text-8xl/17 lg:large-text"
+          className="mb-4 large-text text-5xl md:mb-12 md:text-8xl/17 lg:text-9xl/23"
         >
           Janriz
         </motion.h1>
         <div className="flex items-center gap-4">
           <motion.p
             {...animateOnScroll(fadeRight)}
-            className="flex-1/4 text-xs text-gray-100 md:medium-text"
+            className="flex-1/4 text-xs text-gray-100 md:text-xl"
           >
             Full-stack
             <br />
@@ -27,7 +27,7 @@ const Footer = () => {
           </motion.p>
           <motion.h1
             {...animateOnScroll(fadeLeft)}
-            className="flex-1/1 font-fira-code text-5xl font-semibold md:flex-3/4 md:text-8xl/17 lg:large-text"
+            className="flex-1/1 large-text text-5xl md:flex-3/4 md:text-8xl/17 lg:text-9xl/23"
           >
             Libres
           </motion.h1>
@@ -37,7 +37,7 @@ const Footer = () => {
       <div className="col-span-6 md:col-span-2">
         <motion.h2
           {...animateOnScroll(fadeLeft)}
-          className="subheading mb-6 pl-2 text-2xl"
+          className="mb-6 pl-2 subheading text-2xl"
         >
           &hellip; /Contacts &hellip;
         </motion.h2>

@@ -1,11 +1,12 @@
+import { motion } from "motion/react";
+
 import { animateOnScroll, fadeDown, fadeRight } from "../animation";
 import LinksHolder from "./shared/LinksHolder";
-import { motion } from "motion/react";
 
 const Header = () => {
   return (
     <header>
-      <nav className="py-6 px-12 relative">
+      <nav className="relative px-12 py-6">
         <motion.a
           {...animateOnScroll(fadeRight)}
           href="#"
@@ -24,7 +25,7 @@ const Header = () => {
               { name: "Projects" },
               { name: "Contacts" },
             ]}
-            className="w-fit mx-auto my-4"
+            className="mx-auto my-4 w-fit"
           />
         </motion.div>
       </nav>
