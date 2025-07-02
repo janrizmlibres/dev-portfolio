@@ -15,7 +15,7 @@ const TechToolsPanel = ({ title, className, children }: Props) => {
     <motion.div
       {...animateOnScroll(fadeUp)}
       className={cn(
-        "group relative overflow-hidden rounded-4xl border-1 border-gray-200 p-6 text-gray-100",
+        "group relative cursor-default overflow-hidden rounded-4xl border-1 border-gray-200 p-6 text-gray-100",
         "transition-colors duration-400 ease-in-out hover:text-gray-200 hover:duration-600",
         `active:text-gray-200 active:duration-600 ${className}`
       )}

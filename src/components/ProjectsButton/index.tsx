@@ -2,7 +2,7 @@ import { ArrowRightIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 
 import ProjectsPartialBtn from "./ProjectsPartialBtn";
-import { animateOnScroll, fadeUp } from "../../animation";
+import { animateOnScroll, fadeDown } from "../../animation";
 import { cn } from "../../utils";
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
 const ProjectsButton = ({ className, mainBtnClass }: Props) => {
   return (
     <motion.div
-      {...animateOnScroll(fadeUp)}
+      {...animateOnScroll(fadeDown)}
       className={cn("group hidden items-end gap-4 md:flex", className)}
     >
       <ProjectsPartialBtn

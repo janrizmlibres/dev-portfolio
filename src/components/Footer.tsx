@@ -63,13 +63,13 @@ const Footer = () => {
         </div>
 
         {socialsPlusEmail.map((social) => (
-          <motion.div {...animateOnScroll(fadeUp)} className="max-lg:hidden">
+          <motion.div {...animateOnScroll(fadeRight)} className="max-lg:hidden">
             <SocialTag key={social.name} social={social} />
           </motion.div>
         ))}
 
         <motion.div
-          {...animateOnScroll(fadeUp)}
+          {...animateOnScroll(fadeRight)}
           className="col-span-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden"
         >
           {socialsPlusEmail.map((social) => (

@@ -6,6 +6,7 @@ import {
   InstagramLogoIcon,
   EnvelopeIcon,
   type IconWeight,
+  LinkSimpleIcon,
 } from "@phosphor-icons/react";
 import clsx, { type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -28,6 +29,8 @@ export const getIcon = (platform: string, size: number, weight: IconWeight) => {
       return <InstagramLogoIcon size={size} weight={weight} />;
     case "Email":
       return <EnvelopeIcon size={size} weight={weight} />;
+    case "Link":
+      return <LinkSimpleIcon size={size} weight={weight} />;
     default:
       return null;
   }

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import { animateOnScroll, fadeUp } from "../animation";
+import { animateOnScroll, fadeDown, fadeUp } from "../animation";
 import ProjectsButton from "./ProjectsButton";
 
 const Hero = () => {
@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="custom-container my-20">
       <div className="mb-4 flex items-end justify-between gap-8 sm:mb-8 md:mb-12">
         <motion.h1
-          {...animateOnScroll(fadeUp)}
+          {...animateOnScroll(fadeDown)}
           className="large-text text-5xl text-nowrap sm:text-7xl/12 lg:text-8xl/17 xl:text-9xl/23"
         >
           Full-stack

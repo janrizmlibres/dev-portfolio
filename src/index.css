@@ -96,9 +96,9 @@
   @apply mx-auto max-w-[90rem] px-4 sm:px-8 lg:px-12;
 }
 
-@utility project-grid {
-  @apply grid grid-cols-3 grid-rows-4 gap-4 md:grid-cols-5 md:grid-rows-3 lg:grid-cols-6;
-}
+/* @utility project-grid {
+  @apply grid grid-cols-3 grid-rows-[repeat(3,1fr)_auto] gap-4 md:grid-cols-5 md:grid-rows-3 lg:grid-cols-6;
+} */
 
 @utility clip-path-* {
   clip-path: --value([*]);

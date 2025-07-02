@@ -8,6 +8,7 @@ interface Props {
   tools: string[];
   href?: string;
   enterDirection?: "left" | "right";
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -16,6 +17,7 @@ const ProjectDetails = ({
   tools,
   href = "#",
   enterDirection = "right",
+  className,
   children,
 }: Props) => {
   const animation = animateOnScroll(
@@ -23,7 +25,7 @@ const ProjectDetails = ({
   );
 
   return (
-    <div className="w-9/10">
+    <div className={className}>
       <motion.h3 {...animation} className="mb-6 text-2xl">
         {title}
       </motion.h3>
@@ -32,7 +34,7 @@ const ProjectDetails = ({
           <motion.div
             {...animation}
             key={i}
-            className="rounded-full border border-gray-200 px-4 py-2 font-fira-code max-lg:text-sm"
+            className="cursor-default rounded-full border border-gray-200 px-4 py-2 font-fira-code max-lg:text-sm"
           >
             {tool}
           </motion.div>

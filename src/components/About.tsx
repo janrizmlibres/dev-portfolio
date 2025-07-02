@@ -18,7 +18,7 @@ const About = () => {
             &hellip; /About me &hellip;
           </motion.h2>
           <motion.p
-            {...animateOnScroll(fadeLeft)}
+            {...animateOnScroll(fadeUp)}
             className="flex-4 text-xl text-gray-100"
           >
             Hello! I'm Janriz. I'm a <em>full-stack developer</em> with more
@@ -99,7 +99,7 @@ const About = () => {
           </div>
 
           <motion.div
-            {...animateOnScroll(fadeLeft)}
+            {...animateOnScroll(fadeUp)}
             className="row-start-1 max-md:hidden md:col-span-2 md:col-start-3 md:row-span-3"
           >
             <div className="ml-auto h-full w-9/10 overflow-hidden rounded-4xl bg-profile bg-size-[auto_120%] bg-center grayscale transition-all duration-300 hover:bg-size-[auto_130%] active:bg-size-[auto_130%] max-md:h-64 max-md:w-full lg:w-2/3"></div>
