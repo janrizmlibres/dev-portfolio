@@ -64,8 +64,8 @@ const About = () => {
             className="row-4 md:col-span-2 md:row-3"
             title="Back-end"
           >
-            PostgreSQL / MySQL / MS SQL Server / Node.js / Express / Prisma /
-            MongoDB / ASP.NET / Entity Framework
+            PostgreSQL / MySQL / MS SQL Server / Node.js / Express / MongoDB /
+            ASP.NET / Entity Framework
           </TechToolsPanel>
 
           <motion.div

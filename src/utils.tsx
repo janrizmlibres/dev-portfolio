@@ -7,6 +7,12 @@ import {
   EnvelopeIcon,
   type IconWeight,
 } from "@phosphor-icons/react";
+import clsx, { type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 export const getIcon = (platform: string, size: number, weight: IconWeight) => {
   switch (platform) {

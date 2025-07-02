@@ -20,7 +20,7 @@ const ProjectDetails = ({ title, tools, children }: Props) => {
           <motion.div
             {...animateOnScroll(fadeRight)}
             key={i}
-            className="tech-item"
+            className="rounded-full border border-gray-200 px-4 py-2 font-fira-code"
           >
             {tool}
           </motion.div>

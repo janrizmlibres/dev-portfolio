@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
+
 import { animateOnScroll, fadeUp } from "../../animation";
+import { cn } from "../../utils";
 
 interface Props {
   title: string;
@@ -12,21 +14,22 @@ const TechToolsPanel = ({ title, className, children }: Props) => {
   return (
     <motion.div
       {...animateOnScroll(fadeUp)}
-      className={[
-        "group p-6 rounded-4xl border-1 border-gray-200 overflow-hidden relative text-gray-100 hover:text-gray-200 active:text-gray-200",
-        `transition-colors duration-500 ease-in-out hover:transition-colors hover:duration-800 active:transition-colors active:duration-800 ${className}`,
-      ].join(" ")}
+      className={cn(
+        "group relative overflow-hidden rounded-4xl border-1 border-gray-200 p-6 text-gray-100",
+        "transition-colors duration-400 ease-in-out hover:text-gray-200 hover:duration-600",
+        "active:text-gray-200 active:duration-600",
+        className
+      )}
     >
-      <h3 className="text-xl lg:text-2xl mb-3">{title}</h3>
-      <p className="font-fira-code max-lg:text-sm font-medium leading-8">
+      <h3 className="mb-3 text-xl lg:text-2xl">{title}</h3>
+      <p className="font-fira-code leading-8 font-medium max-lg:text-sm">
         {children}
       </p>
       <span
-        className={[
-          "w-3/2 h-0 pt-[150%] object-contain bg-light-100 absolute top-1/2 left-1/2 m-[-75%] opacity-100 rounded-full",
-          "scale-0 translate-z-0 transition-all duration-500 ease-in-out -z-1 group-hover:transition-all group-hover:duration-800",
-          "group-hover:scale-100 group-hover:translate-z-0 group-active:transition-all group-active:duration-800 group-active:scale-100 group-active:translate-z-0",
-        ].join(" ")}
+        className={cn(
+          "absolute top-1/2 left-1/2 -z-1 m-[-75%] h-0 w-3/2 translate-z-0 scale-0 rounded-full bg-light-100 object-contain pt-[150%] opacity-100",
+          "transition-all duration-400 ease-in-out group-hover:scale-100 group-hover:duration-600 group-active:scale-100 group-active:duration-600"
+        )}
       ></span>
     </motion.div>
   );

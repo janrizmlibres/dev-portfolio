@@ -62,10 +62,6 @@
   @apply font-fira-code text-lg font-semibold;
 }
 
-@utility tech-item {
-  @apply rounded-full border border-gray-200 px-4 py-2 font-fira-code;
-}
-
 @utility large-text {
   @apply font-fira-code font-semibold;
 }
