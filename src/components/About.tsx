@@ -102,14 +102,14 @@ const About = () => {
             {...animateOnScroll(fadeUp)}
             className="row-start-1 max-md:hidden md:col-span-2 md:col-start-3 md:row-span-3"
           >
-            <div className="ml-auto h-full w-9/10 overflow-hidden rounded-4xl bg-profile bg-size-[auto_120%] bg-center grayscale transition-all duration-300 hover:bg-size-[auto_130%] active:bg-size-[auto_130%] max-md:h-64 max-md:w-full lg:w-2/3"></div>
+            <div className="ml-auto h-full w-9/10 overflow-hidden rounded-4xl bg-profile bg-size-[auto_120%] bg-center transition-all duration-300 hover:bg-size-[auto_130%] active:bg-size-[auto_130%] max-md:h-64 max-md:w-full lg:w-2/3"></div>
           </motion.div>
 
           <motion.div className="max-w-sm overflow-hidden rounded-4xl md:hidden">
             <img
               src={profile}
               alt="Profile Image"
-              className="object-cover grayscale transition-transform duration-300 hover:scale-110 active:scale-110"
+              className="object-cover transition-transform duration-300 hover:scale-110 active:scale-110"
             />
           </motion.div>
         </div>

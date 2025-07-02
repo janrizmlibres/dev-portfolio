@@ -89,7 +89,7 @@ const Projects = () => {
                 href={href}
                 className="col-span-3 row-span-2 lg:col-span-4"
                 backgroundClasses={cn(
-                  "bg-project-two-three lg:bg-size-[100%] bg-size-[auto_100%] bg-center group-hover:lg:bg-size-[105%] ",
+                  "bg-project-two-three lg:bg-size-[100%] bg-size-[auto_100%] bg-left lg:bg-center group-hover:lg:bg-size-[105%] ",
                   "group-active:lg:bg-size-[105%] group-hover:bg-size-[auto_105%] group-active:bg-size-[auto_105%]"
                 )}
                 segmentClassesArray={[
