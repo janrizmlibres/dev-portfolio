@@ -83,7 +83,7 @@
 }
 
 @utility project-grid {
-  @apply grid grid-cols-5 grid-rows-4 gap-4 lg:grid-cols-6;
+  @apply grid grid-cols-3 grid-rows-4 gap-4 md:grid-cols-5 md:grid-rows-3 lg:grid-cols-6;
 }
 
 @utility clip-path-* {
