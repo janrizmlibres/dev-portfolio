@@ -46,7 +46,7 @@ const Footer = () => {
           <motion.div {...animateOnScroll(fadeUp)} className="max-w-3/4 px-2">
             <LinksHolder
               links={[
-                { name: "Main" },
+                { name: "Main", url: "#" },
                 { name: "About" },
                 { name: "Work" },
                 { name: "Projects" },
