@@ -11,7 +11,7 @@ interface Props {
 
 const ProjectPanel = ({ href, reverse = false, render, children }: Props) => {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-5 lg:grid-cols-6">
+    <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:grid-cols-5 lg:grid-cols-6">
       <div
         className={cn(
           "max-md:row-start-2 md:col-span-2",

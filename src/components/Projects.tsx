@@ -14,7 +14,7 @@ const Projects = () => {
       <div className="grid grid-cols-5 gap-4 lg:grid-cols-6">
         <motion.h2
           {...animateOnScroll(fadeRight)}
-          className="col-span-3 col-start-3 mb-6 pl-2 subheading"
+          className="col-span-3 mb-6 pl-2 subheading md:col-start-3"
         >
           &hellip; /Projects &hellip;
         </motion.h2>
@@ -125,10 +125,10 @@ const Projects = () => {
               href="https://github.com/janrizmlibres/pulse-vr"
               className="col-span-2"
             >
-              <em>PulseVR</em> is a landing page website for a fictional startup
-              that offers virtual reality experiences. It features a modern
-              design and a responsive layout. Built with React.js and Tailwind,
-              showcasing my skills in <em>UI/UX</em> design.
+              <em>PulseVR</em> is a responsive landing page for a fictional VR
+              startup, built with React.js and Tailwind CSS. It showcases modern
+              UI/UX design with clean layout, smooth interactions, and
+              mobile-friendly responsiveness.
             </ProjectDetails>
           </div>
         </ProjectPanel>
