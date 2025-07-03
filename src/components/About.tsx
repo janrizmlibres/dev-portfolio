@@ -44,7 +44,10 @@ const About = () => {
             {...animateOnScroll(fadeLeft)}
             className="row-2 hidden items-center justify-center md:flex"
           >
-            <ButtonPrompt iconName="Github" />
+            <ButtonPrompt
+              iconName="Github"
+              href="https://github.com/janrizmlibres"
+            />
           </motion.div>
 
           <div className="row-3 flex w-full md:hidden">
@@ -56,7 +59,10 @@ const About = () => {
               {...animateOnScroll(fadeLeft)}
               className="flex flex-1 items-center justify-center"
             >
-              <ButtonPrompt iconName="Github" />
+              <ButtonPrompt
+                iconName="Github"
+                href="https://github.com/janrizmlibres"
+              />
             </motion.div>
           </div>
 

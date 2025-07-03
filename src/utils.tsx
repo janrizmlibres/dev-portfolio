@@ -15,10 +15,17 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const getIcon = (platform: string, size: number, weight: IconWeight) => {
+export const getIcon = (
+  platform: string,
+  size: number,
+  weight: IconWeight,
+  className?: string
+) => {
   switch (platform) {
     case "Github":
-      return <GithubLogoIcon size={size} weight={weight} />;
+      return (
+        <GithubLogoIcon size={size} weight={weight} className={className} />
+      );
     case "LinkedIn":
       return <LinkedinLogoIcon size={size} weight={weight} />;
     case "Telegram":

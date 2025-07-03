@@ -18,14 +18,14 @@ const ButtonPrompt = ({
     <div className={cn("group flex w-fit", className)}>
       <a
         href={href}
-        className="flex size-14 items-center justify-center rounded-full border-1 border-gray-100 transition-transform duration-300 group-hover:translate-x-9"
+        className="flex size-11 items-center justify-center rounded-full border-1 border-gray-100 transition-transform duration-300 group-hover:translate-x-9 sm:size-14"
         target="_blank"
       >
-        {getIcon(iconName, 24, weight)}
+        {getIcon(iconName, 24, weight, "max-md:text-5xl")}
       </a>
       <a
         href={href}
-        className="-ml-5 flex size-14 items-center justify-center rounded-full bg-light-100 text-dark-100 transition-transform duration-300 group-hover:-translate-x-9"
+        className="-ml-3 flex size-11 items-center justify-center rounded-full bg-light-100 text-dark-100 transition-transform duration-300 group-hover:-translate-x-9 sm:-ml-5 sm:size-14"
         target="_blank"
       >
         <ArrowUpRightIcon size={24} />
