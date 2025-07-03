@@ -8,7 +8,9 @@ import profile from "../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section className="ovderflow-x-hidden mt-48 mb-32" id="about">
+    <section className="ovderflow-x-hidden relative mt-48 mb-32">
+      <div id="about" className="absolute -top-32"></div>
+
       <section className="custom-container px-4 sm:px-8 lg:px-12">
         <div className="mb-24 flex flex-col items-start gap-y-8 md:flex-row">
           <motion.h2
@@ -122,7 +124,7 @@ const About = () => {
       </section>
 
       <section className="relative">
-        <div id="work" className="absolute top-0 -mt-8"></div>
+        <div id="work" className="absolute -top-32"></div>
 
         <motion.h3
           {...animateOnScroll(fadeUp)}

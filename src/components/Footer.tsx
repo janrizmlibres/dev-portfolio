@@ -56,8 +56,7 @@ const Footer = () => {
           </motion.div>
 
           <TechToolsPanel title="Site" className="min-w-3/4 max-md:max-w-fit">
-            Developed by ME /<br />
-            Designed by Taisia /<br />
+            Handcrafted by ME /<br />
             Powered by React
           </TechToolsPanel>
         </div>

@@ -16,7 +16,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
       <motion.a
         {...animateOnScroll(fadeRight)}
         href="#"
-        className="absolute top-1/2 -translate-y-1/2 text-xl"
+        className="absolute top-1/2 z-1 -translate-y-1/2 text-xl"
       >
         <h1>
           Janriz

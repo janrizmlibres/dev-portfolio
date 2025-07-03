@@ -8,10 +8,9 @@ import WindowPane from "./shared/WindowPane";
 
 const Projects = () => {
   return (
-    <section
-      className="custom-container mb-48 px-4 sm:px-8 lg:px-12"
-      id="projects"
-    >
+    <section className="relative custom-container mb-48 px-4 sm:px-8 lg:px-12">
+      <div id="projects" className="absolute -top-32"></div>
+
       <div className="grid grid-cols-5 gap-4 lg:grid-cols-6">
         <motion.h2
           {...animateOnScroll(fadeRight)}
