@@ -4,8 +4,7 @@ import { animateOnScroll, fadeLeft, fadeRight, fadeUp } from "../animation";
 import ButtonPrompt from "./shared/ButtonPrompt";
 import TechToolsPanel from "./shared/TechToolsPanel";
 import WorkPanel from "./shared/WorkPanel";
-import profileAvif from "../assets/profile.avif";
-import profileJpeg from "../assets/profile.jpg";
+import profile from "../assets/profile.jpg";
 
 const About = () => {
   return (
@@ -115,16 +114,11 @@ const About = () => {
           </motion.div>
 
           <motion.div className="mb-20 max-w-sm overflow-hidden rounded-4xl md:hidden">
-            <picture>
-              <source srcSet={profileAvif} type="image/avif" />
-              <source srcSet={profileJpeg} type="image/jpeg" />
-
-              <img
-                src={profileJpeg}
-                alt="Profile Image"
-                className="object-cover transition-transform duration-300 hover:scale-110 active:scale-110"
-              />
-            </picture>
+            <img
+              src={profile}
+              alt="Profile Image"
+              className="object-cover transition-transform duration-300 hover:scale-110 active:scale-110"
+            />
           </motion.div>
         </div>
       </section>

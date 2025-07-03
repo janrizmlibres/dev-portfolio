@@ -11,10 +11,7 @@
   --font-fira-code: "Fira Code", monospace;
   --font-open-sans: "Open Sans", sans-serif;
 
-  --background-image-profile: image-set(
-    url("./assets/profile.avif") type("image/avif"),
-    url("./assets/profile.jpg") type("image/jpeg")
-  );
+  --background-image-profile: url("./assets/profile.jpg");
 
   --background-image-project-one-one: image-set(
     url("./assets/project-one/one.avif") type("image/avif"),
