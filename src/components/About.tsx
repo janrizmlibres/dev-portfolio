@@ -12,7 +12,7 @@ const About = () => {
       <div id="about" className="absolute -top-32"></div>
 
       <section className="custom-container px-4 sm:px-8 lg:px-12">
-        <div className="mb-24 flex flex-col items-start gap-y-8 md:flex-row">
+        <div className="mb-8 flex flex-col items-start gap-y-8 md:mb-24 md:flex-row">
           <motion.h2
             {...animateOnScroll(fadeRight)}
             className="flex-3 subheading"
@@ -113,7 +113,7 @@ const About = () => {
             <div className="ml-auto h-full w-9/10 overflow-hidden rounded-4xl bg-profile bg-size-[auto_120%] bg-center transition-all duration-300 hover:bg-size-[auto_130%] active:bg-size-[auto_130%] max-md:h-64 max-md:w-full lg:w-2/3"></div>
           </motion.div>
 
-          <motion.div className="max-w-sm overflow-hidden rounded-4xl md:hidden">
+          <motion.div className="mb-20 max-w-sm overflow-hidden rounded-4xl md:hidden">
             <img
               src={profile}
               alt="Profile Image"

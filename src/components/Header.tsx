@@ -40,7 +40,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
             { name: "Contacts" },
           ]}
           setIsOpen={setIsOpen}
-          className="mx-auto my-4 w-fit justify-center max-md:flex-col max-md:text-xl"
+          className="mx-auto my-4 w-fit items-center justify-center max-md:flex-col max-md:text-lg"
         />
       </motion.nav>
 

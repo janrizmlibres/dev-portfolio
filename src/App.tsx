@@ -7,12 +7,13 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Socials from "./components/Socials";
+import BreakpointProvider from "./providers/breakpointProvider";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <BreakpointProvider queries={{ sm: "(min-width: 640px)" }}>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <Hero />
       <Socials />
@@ -26,7 +27,7 @@ function App() {
       >
         <XIcon size={32} className={`${!isOpen && "hidden"}`} />
       </button>
-    </>
+    </BreakpointProvider>
   );
 }
 

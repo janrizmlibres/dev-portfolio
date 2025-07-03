@@ -4,7 +4,7 @@ const defaultValue = {};
 
 export const BreakpointContext = createContext(defaultValue);
 
-function useBreakpoint() {
+function useBreakpoint(): Record<string, boolean> {
   const context = useContext(BreakpointContext);
   if (context === defaultValue) {
     throw new Error("useBreakpoint must be used within BreakpointProvider");
