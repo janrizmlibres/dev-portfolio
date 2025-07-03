@@ -30,7 +30,7 @@ export const socialsPlusEmail: Social[] = [
   ...socials.slice(0, 2),
   {
     name: "Email",
-    url: "temp", // TODO: Update
+    url: "mailto:libres.janriz@gmail.com",
   },
   ...socials.slice(2),
 ];
