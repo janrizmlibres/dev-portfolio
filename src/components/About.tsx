@@ -21,7 +21,7 @@ const About = () => {
           </motion.h2>
           <motion.p
             {...animateOnScroll(fadeUp)}
-            className="flex-4 text-xl text-gray-100"
+            className="flex-4 text-gray-100 sm:text-lg md:text-xl"
           >
             Hello! I'm Janriz. I'm a <em>full-stack developer</em> with more
             than <em>1 year</em> of experience.

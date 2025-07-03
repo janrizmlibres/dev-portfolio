@@ -8,8 +8,10 @@ import TechToolsPanel from "./shared/TechToolsPanel";
 
 const Footer = () => {
   return (
-    <section className="mb-8">
-      <div className="custom-container grid grid-cols-2 items-end gap-x-4 gap-y-8 md:gap-y-12 lg:grid-cols-6">
+    <section className="relative mb-8">
+      <div id="contacts" className="absolute -top-28"></div>
+
+      <div className="custom-container grid grid-cols-6 items-end gap-x-4 gap-y-8 md:gap-y-12">
         <div className="col-span-6 max-md:row-start-2 md:col-span-4">
           <motion.h1
             {...animateOnScroll(fadeRight)}
@@ -35,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div id="contacts" className="col-span-6 md:col-span-2">
+        <div className="col-span-6 md:col-span-2">
           <motion.h2
             {...animateOnScroll(fadeUp)}
             className="mb-6 pl-2 subheading text-2xl"
@@ -43,7 +45,10 @@ const Footer = () => {
             &hellip; /Contacts &hellip;
           </motion.h2>
 
-          <motion.div {...animateOnScroll(fadeUp)} className="max-w-3/4 px-2">
+          <motion.div
+            {...animateOnScroll(fadeUp)}
+            className="px-2 max-md:max-w-3/4"
+          >
             <LinksHolder
               links={[
                 { name: "Main", url: "#" },
@@ -51,7 +56,7 @@ const Footer = () => {
                 { name: "Work" },
                 { name: "Projects" },
               ]}
-              className="mb-6 justify-between"
+              className="mb-6 justify-between gap-x-2 max-sm:text-sm md:max-lg:text-sm"
             />
           </motion.div>
 

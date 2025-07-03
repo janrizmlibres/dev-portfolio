@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="flex flex-col-reverse items-start justify-between gap-8 max-md:mb-12 max-sm:mb-8 sm:max-md:gap-12 md:flex-row lg:items-center">
         <motion.p
           {...animateOnScroll(fadeUp)}
-          className="text-xl text-gray-100 sm:pl-4 md:basis-md md:max-lg:text-base"
+          className="text-gray-100 sm:pl-4 md:basis-md lg:text-xl"
         >
           My goal is to write maintainable, clean, and understandable code. I
           don't just build applications, I create <em>solutions</em>.

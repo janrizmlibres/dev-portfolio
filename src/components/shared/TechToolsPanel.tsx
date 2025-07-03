@@ -15,13 +15,13 @@ const TechToolsPanel = ({ title, className, children }: Props) => {
     <motion.div
       {...animateOnScroll(fadeUp)}
       className={cn(
-        "group relative cursor-default overflow-hidden rounded-4xl border-1 border-gray-200 p-6 text-gray-100",
+        "group relative cursor-default overflow-hidden rounded-4xl border-1 border-gray-200 p-5 text-gray-100 sm:p-6",
         "transition-colors duration-400 ease-in-out hover:text-gray-200 hover:duration-600",
         `active:text-gray-200 active:duration-600 ${className}`
       )}
     >
-      <h3 className="mb-3 text-xl lg:text-2xl">{title}</h3>
-      <p className="font-fira-code leading-8 font-medium max-lg:text-sm">
+      <h3 className="mb-3 text-lg sm:text-xl lg:text-2xl">{title}</h3>
+      <p className="font-fira-code leading-8 font-medium max-lg:text-sm max-sm:text-xs">
         {children}
       </p>
       <span
