@@ -11,22 +11,48 @@
   --font-fira-code: "Fira Code", monospace;
   --font-open-sans: "Open Sans", sans-serif;
 
-  --background-image-profile: url("./assets/profile.jpg");
+  --background-image-profile: image-set(
+    url("./assets/profile.avif") type("image/avif"),
+    url("./assets/profile.jpg") type("image/jpeg")
+  );
 
-  --background-image-project-one-one: url("./assets/project-one/one.jpg");
-  --background-image-project-one-two: url("./assets/project-one/two.jpg");
-  --background-image-project-one-three: url("./assets/project-one/three.jpg");
-  --background-image-project-one-four: url("./assets/project-one/four.jpg");
+  --background-image-project-one-one: image-set(
+    url("./assets/project-one/one.avif") type("image/avif"),
+    url("./assets/project-one/one.jpg") type("image/jpeg")
+  );
+  --background-image-project-one-two: image-set(
+    url("./assets/project-one/two.avif") type("image/avif"),
+    url("./assets/project-one/two.jpg") type("image/jpeg")
+  );
+  --background-image-project-one-three: image-set(
+    url("./assets/project-one/three.avif") type("image/avif"),
+    url("./assets/project-one/three.jpg") type("image/jpeg")
+  );
+  --background-image-project-one-four: image-set(
+    url("./assets/project-one/four.avif") type("image/avif"),
+    url("./assets/project-one/four.jpg") type("image/jpeg")
+  );
 
-  --background-image-project-two-one: url("./assets/project-two/one.jpg");
-  --background-image-project-two-two: url("./assets/project-two/two.jpg");
-  --background-image-project-two-three: url("./assets/project-two/three.jpg");
+  --background-image-project-two-one: image-set(
+    url("./assets/project-two/one.avif") type("image/avif"),
+    url("./assets/project-two/one.jpg") type("image/jpeg")
+  );
+  --background-image-project-two-two: image-set(
+    url("./assets/project-two/two.avif") type("image/avif"),
+    url("./assets/project-two/two.jpg") type("image/jpeg")
+  );
+  --background-image-project-two-three: image-set(
+    url("./assets/project-two/three.avif") type("image/avif"),
+    url("./assets/project-two/three.jpg") type("image/jpeg")
+  );
 
   --ease-hover-bg: cubic-bezier(0.7, 0, 0.2, 1);
 
   --shadow-sticky: 0 12px 32px rgba(255, 255, 255, 0.03);
 
   --animate-infinite-slide: slide 25s linear infinite;
+  --animate-infinite-slide-fast: slide 15s linear infinite;
+  --animate-infinite-slide-reverse: slideReverse 10s linear infinite;
 
   --animate-btn-hover:
     moveUpInitial 0.2s forwards, moveUpEnd 0.2s forwards 0.2s;
@@ -39,6 +65,15 @@
     }
     to {
       transform: translateX(calc(-100% - 32px));
+    }
+  }
+
+  @keyframes slideReverse {
+    from {
+      transform: translateX(calc(-100% - 32px));
+    }
+    to {
+      transform: translateX(0);
     }
   }
 
