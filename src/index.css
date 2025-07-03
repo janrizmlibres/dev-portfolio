@@ -60,11 +60,11 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply overflow-x-hidden scroll-smooth;
   }
 
   body {
-    @apply bg-dark-100 font-open-sans text-light-100;
+    @apply overflow-x-hidden bg-dark-100 font-open-sans text-light-100;
   }
 
   em {
@@ -73,7 +73,7 @@
 }
 
 @utility mobile-nav {
-  @apply fixed top-0 left-0 z-2 flex h-screen w-full items-center justify-center bg-dark-100/90 backdrop-blur-xs transition-all duration-500 ease-in;
+  @apply absolute top-0 left-0 z-2 flex h-screen w-full items-center justify-center bg-dark-100/90 backdrop-blur-xs transition-all duration-500 ease-in;
 }
 
 @utility nav-open {

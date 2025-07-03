@@ -12,7 +12,7 @@ interface Props {
 
 const LinksHolder = ({ links, className }: Props) => {
   return (
-    <ul className={cn("flex gap-10", className)}>
+    <ul className={cn("flex gap-x-10 gap-y-8", className)}>
       {links.map((link) => (
         <li key={link.name}>
           <a

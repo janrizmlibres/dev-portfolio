@@ -12,7 +12,7 @@ interface Props {
 
 const Header = ({ isOpen, setIsOpen }: Props) => {
   return (
-    <header className="sticky top-0 z-2 bg-dark-100 px-12 py-12 md:py-6">
+    <header className="fixed top-0 z-2 w-full bg-dark-100 px-12 py-12 md:py-6">
       <motion.a
         {...animateOnScroll(fadeRight)}
         href="#"
@@ -39,7 +39,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
             { name: "Projects" },
             { name: "Contacts" },
           ]}
-          className="mx-auto my-4 w-fit justify-center max-md:flex-col"
+          className="mx-auto my-4 w-fit justify-center max-md:flex-col max-md:text-xl"
         />
       </motion.nav>
 

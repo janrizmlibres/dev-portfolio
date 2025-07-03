@@ -120,7 +120,7 @@ const About = () => {
 
         <motion.h3
           {...animateOnScroll(fadeUp)}
-          className="custom-container mt-8 mb-4 px-4 text-right large-text text-5xl sm:my-8 sm:px-8 sm:text-7xl/12 lg:px-12 lg:text-9xl/23"
+          className="custom-container mt-8 mb-4 px-4 text-right large-text text-5xl sm:my-8 sm:px-8 sm:text-7xl/12 sm:max-md:mt-12 lg:px-12 lg:text-9xl/23"
         >
           Work
         </motion.h3>

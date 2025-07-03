@@ -124,7 +124,6 @@ const Projects = () => {
               title="PulseVR"
               tools={["TypeScript", "React.js", "Tailwind"]}
               href="https://github.com/janrizmlibres/pulse-vr"
-              enterDirection="left"
               className="col-span-2"
             >
               <em>PulseVR</em> is a landing page website for a fictional startup
