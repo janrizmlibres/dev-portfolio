@@ -53,13 +53,13 @@ const About = () => {
           </motion.div>
 
           <div className="row-3 flex w-full md:hidden">
-            <TechToolsPanel className="flex-1" title="Styles">
+            <TechToolsPanel className="flex-3" title="Styles">
               SCSS / SASS / Tailwind / Shadcn / CSS Modules
             </TechToolsPanel>
 
             <motion.div
               {...animateOnScroll(fadeLeft)}
-              className="flex flex-1 items-center justify-center"
+              className="flex flex-2 items-center justify-center"
             >
               <ButtonPrompt
                 iconName="Github"
@@ -101,7 +101,7 @@ const About = () => {
               </p>
             </motion.div>
 
-            <TechToolsPanel className="flex-1" title="DevOps">
+            <TechToolsPanel className="flex-2" title="DevOps">
               Docker / GitHub Actions (CI/CD) / Bash
             </TechToolsPanel>
           </div>

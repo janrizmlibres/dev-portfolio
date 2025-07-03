@@ -20,8 +20,8 @@ const TechToolsPanel = ({ title, className, children }: Props) => {
         `active:text-gray-200 active:duration-600 ${className}`
       )}
     >
-      <h3 className="mb-3 text-lg sm:text-xl lg:text-2xl">{title}</h3>
-      <p className="font-fira-code leading-8 font-medium max-lg:text-sm max-sm:text-xs">
+      <h3 className="mb-3 text-xl lg:text-2xl">{title}</h3>
+      <p className="font-fira-code leading-8 font-medium max-lg:text-sm">
         {children}
       </p>
       <span

@@ -28,7 +28,7 @@ const ProjectDetails = ({
           <motion.div
             {...animateOnScroll(fadeUp)}
             key={i}
-            className="cursor-default rounded-full border border-gray-200 px-4 py-2 font-fira-code max-lg:text-sm"
+            className="cursor-default rounded-full border border-gray-200 px-4 py-2 font-fira-code"
           >
             {tool}
           </motion.div>
@@ -37,7 +37,7 @@ const ProjectDetails = ({
 
       <motion.p
         {...animateOnScroll(fadeUp)}
-        className="mb-8 text-gray-100 max-lg:text-sm lg:mb-12"
+        className="mb-8 text-gray-100 lg:mb-12"
       >
         {children}
       </motion.p>

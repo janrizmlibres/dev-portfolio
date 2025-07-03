@@ -127,8 +127,7 @@ const Projects = () => {
             >
               <em>PulseVR</em> is a responsive landing page for a fictional VR
               startup, built with React.js and Tailwind CSS. It showcases modern
-              UI/UX design with clean layout, smooth interactions, and
-              mobile-friendly responsiveness.
+              UI/UX design with a clean and mobile-friendly layout.
             </ProjectDetails>
           </div>
         </ProjectPanel>
