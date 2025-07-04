@@ -21,7 +21,7 @@ const Footer = () => {
           </motion.h1>
           <div className="flex items-center gap-4">
             <motion.p
-              {...animateOnScroll(fadeRight)}
+              {...animateOnScroll(fadeUp)}
               className="flex-1/4 text-xs text-gray-100 md:text-xl"
             >
               Full-stack
