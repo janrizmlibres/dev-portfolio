@@ -22,7 +22,7 @@ function App() {
       <Footer />
 
       <button
-        className="fixed top-8 right-12 z-2 md:hidden"
+        className="fixed top-8 right-4 z-2 sm:right-8 md:hidden"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <XIcon size={32} className={`${!isOpen && "hidden"}`} />

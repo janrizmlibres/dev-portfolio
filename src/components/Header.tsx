@@ -16,7 +16,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
       <motion.a
         {...animateOnScroll(fadeRight)}
         href="#"
-        className="absolute top-1/2 z-1 -translate-y-1/2 text-xl"
+        className="absolute top-1/2 left-6 z-1 -translate-y-1/2 text-xl sm:left-10 lg:left-12"
       >
         <h1>
           Janriz
@@ -47,7 +47,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
       <motion.button
         {...animateOnScroll(fadeLeft)}
         className={cn(
-          "absolute top-1/2 right-12 z-2 -translate-y-1/2 md:hidden",
+          "absolute top-1/2 right-4 z-2 -translate-y-1/2 sm:right-8 md:hidden",
           isOpen && "hidden"
         )}
         onClick={() => setIsOpen((prev) => !prev)}
