@@ -1,7 +1,7 @@
 import { ListIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 
-import { animateOnScroll, fadeDown, fadeLeft, fadeRight } from "../animation";
+import { animateOnScroll, fadeDown, fadeRight } from "../animation";
 import { cn } from "../utils";
 import LinksHolder from "./shared/LinksHolder";
 
@@ -45,7 +45,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
       </motion.nav>
 
       <motion.button
-        {...animateOnScroll(fadeLeft)}
+        {...animateOnScroll(fadeRight)}
         className={cn(
           "absolute top-1/2 right-4 z-2 -translate-y-1/2 sm:right-8 md:hidden",
           isOpen && "hidden"
