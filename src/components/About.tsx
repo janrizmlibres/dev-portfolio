@@ -34,8 +34,8 @@ const About = () => {
             title="Front-end"
             active
           >
-            TypeScript / React / React Native / NextJs (App Router) / Vite / Vue
-            / Vitest / Mocha / Chai / Pinia
+            TypeScript / React / NextJs (App Router) / Vite / Vue / Vitest /
+            Mocha / Chai / Pinia
           </TechToolsPanel>
 
           <TechToolsPanel className="row-2 max-md:hidden" title="Styles">
