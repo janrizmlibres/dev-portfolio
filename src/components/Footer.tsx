@@ -72,14 +72,13 @@ const Footer = () => {
           </motion.div>
         ))}
 
-        <motion.div
-          {...animateOnScroll(fadeRight)}
-          className="col-span-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden"
-        >
+        <div className="col-span-6 grid grid-cols-2 gap-4 md:grid-cols-4 lg:hidden">
           {socialsPlusEmail.map((social) => (
-            <SocialTag key={social.name} social={social} />
+            <motion.div {...animateOnScroll(fadeRight)}>
+              <SocialTag key={social.name} social={social} />
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
