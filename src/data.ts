@@ -14,7 +14,7 @@ export const socials: Social[] = [
   },
   {
     name: "Telegram",
-    url: "https://t.me/janrizmlibres", // TODO: To be updated
+    url: "https://t.me/janrizlibres",
   },
   {
     name: "Facebook",
