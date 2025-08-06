@@ -5,11 +5,18 @@ import { cn } from "../../utils";
 interface Props {
   href: string;
   reverse?: boolean;
+  renderClasses?: string;
   render: (href: string) => React.ReactNode;
   children?: React.ReactNode;
 }
 
-const ProjectPanel = ({ href, reverse = false, render, children }: Props) => {
+const ProjectPanel = ({
+  href,
+  reverse = false,
+  renderClasses = "grid-rows-3",
+  render,
+  children,
+}: Props) => {
   return (
     <div className="grid grid-cols-1 gap-x-4 gap-y-12 md:grid-cols-5 lg:grid-cols-6">
       <div
@@ -24,7 +31,12 @@ const ProjectPanel = ({ href, reverse = false, render, children }: Props) => {
       <div
         className={cn("md:col-span-3 lg:col-span-4", reverse && "row-start-1")}
       >
-        <div className="relative grid grid-cols-3 grid-rows-3 gap-4 lg:grid-cols-4">
+        <div
+          className={cn(
+            "relative grid grid-cols-3 grid-rows-3 gap-4 lg:grid-cols-4",
+            renderClasses
+          )}
+        >
           {render(href)}
         </div>
       </div>
