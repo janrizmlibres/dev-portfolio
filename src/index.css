@@ -43,6 +43,11 @@
     url("./assets/project-two/three.jpg") type("image/jpeg")
   );
 
+  --background-image-project-three-one: url("./assets/project-three/one.jpg");
+  --background-image-project-three-two: url("./assets/project-three/two.jpg");
+  --background-image-project-three-three: url("./assets/project-three/three.jpg");
+  --background-image-project-three-four: url("./assets/project-three/four.jpg");
+
   --ease-hover-bg: cubic-bezier(0.7, 0, 0.2, 1);
 
   --shadow-sticky: 0 12px 32px rgba(255, 255, 255, 0.03);
