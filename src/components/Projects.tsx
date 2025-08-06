@@ -131,6 +131,61 @@ const Projects = () => {
             </ProjectDetails>
           </div>
         </ProjectPanel>
+
+        <ProjectPanel
+          href="https://github.com/janrizmlibres/mercado-ecommerce/"
+          renderClasses="grid-rows-4 max-lg:grid-rows-3"
+          render={(href) => (
+            <>
+              <WindowPane
+                href={href}
+                className="aspect-square lg:row-start-2"
+                backgroundClasses="bg-project-three-four bg-size-[auto_100%] bg-left hover:bg-size-[auto_105%] active:bg-size-[auto_105%]"
+              />
+
+              <WindowPane
+                href={href}
+                className="col-start-4 row-span-3 max-lg:hidden"
+                backgroundClasses="bg-project-three-two bg-size-[auto_100%] bg-center hover:bg-size-[auto_105%] active:bg-size-[auto_105%]"
+              />
+
+              <WindowPane
+                href={href}
+                className="col-span-2 col-start-2 row-span-2"
+                backgroundClasses="bg-project-three-one bg-size-[auto_105%] bg-center hover:bg-size-[auto_110%] active:bg-size-[auto_110%]"
+              />
+
+              <WindowPane
+                href={href}
+                className="row-span-2 row-start-2 lg:row-start-3"
+                backgroundClasses="bg-project-three-three bg-size-[auto_100%] bg-right hover:bg-size-[auto_105%] active:bg-size-[auto_105%]"
+              />
+            </>
+          )}
+        >
+          <div className="grid-cols-2 gap-4 md:grid">
+            <div className="aspect-square max-lg:hidden"></div>
+
+            <ProjectDetails
+              title="Mercado"
+              tools={[
+                "TypeScript",
+                "Nest.js",
+                "GraphQL",
+                "Redis",
+                "PostgreSQL",
+                "Docker",
+                "Prisma",
+              ]}
+              href="https://github.com/janrizmlibres/mercado-ecommerce/"
+              className="col-span-2"
+            >
+              <em>Mercado</em> is a scalable, 8-service e-commerce backend built
+              with NestJS to demonstrate a production-ready microservices
+              architecture using GraphQL, Docker, and Prisma.
+            </ProjectDetails>
+          </div>
+        </ProjectPanel>
       </div>
     </section>
   );
