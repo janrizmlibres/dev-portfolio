@@ -1,5 +1,5 @@
-export { default as first } from "./first.png";
-export { default as second } from "./second.png";
-export { default as third } from "./third.png";
-export { default as fourth } from "./fourth.png";
+export { default as first } from "./1.png";
+export { default as second } from "./2.png";
+export { default as third } from "./3.png";
+export { default as fourth } from "./4.png";
 

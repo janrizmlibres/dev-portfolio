@@ -73,17 +73,15 @@ export const projects: Project[] = [
     title: "Mercado",
     tools: [
       "TypeScript",
+      "TanStack",
       "Nest.js",
-      "GraphQL",
-      "Redis",
-      "PostgreSQL",
+      "Postgres",
       "Docker",
-      "Prisma",
     ],
-    repoHref: "https://github.com/janrizmlibres/mercado-ecommerce/",
-    demoHref: "https://github.com/janrizmlibres/mercado-ecommerce/",
+    repoHref: "https://github.com/janrizmlibres/mercado-front/",
+    demoHref: "https://mercado-front-production.up.railway.app/",
     images: Object.values(mercado),
     description:
-      "Mercado is a scalable, 8-service e-commerce backend built with NestJS to demonstrate a production-ready microservices architecture using GraphQL, Docker, and Prisma.",
+      "A modern, type-safe e-commerce frontend built with React, Vite, TanStack Router, and GraphQL. Features product browsing, cart management, checkout, and an admin dashboard.",
   },
 ];
