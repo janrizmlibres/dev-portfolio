@@ -34,7 +34,7 @@ const About = () => {
             title="Front-end"
             active
           >
-            TypeScript / React / NextJs (App Router) / Vite / Vue / Vitest /
+            TypeScript / Vue / React / TanStack / NextJs / Redux / Zustand / Vitest /
             Mocha / Chai / Pinia
           </TechToolsPanel>
 
@@ -72,8 +72,8 @@ const About = () => {
             className="row-4 md:col-span-2 md:row-3"
             title="Back-end"
           >
-            PostgreSQL / MySQL / MS SQL Server / Node.js / Express / MongoDB /
-            ASP.NET / Entity Framework
+            Node.js / Express / Nest.js / ASP.NET / PostgreSQL / MySQL / MS SQL
+            Server / DynamoDB / MongoDB / AWS
           </TechToolsPanel>
 
           <motion.div
@@ -134,6 +134,13 @@ const About = () => {
         </motion.h3>
 
         <WorkPanel
+          years="2025"
+          duration="3 months"
+          company="Tolstoy"
+          role="Full-stack Developer"
+          tech="TanStack & AWS"
+        />
+        <WorkPanel
           years="2024"
           duration="3 months"
           company="Elinnov Technologies"
@@ -145,7 +152,7 @@ const About = () => {
           duration="10 months"
           company="The Crusader Yearbook"
           role="Web Developer"
-          tech="Laravel"
+          tech="WordPress & Laravel"
           isLast
         />
 

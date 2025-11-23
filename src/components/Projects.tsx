@@ -12,7 +12,7 @@ const Projects = () => {
       <div className="grid grid-cols-5 gap-4 lg:grid-cols-6">
         <motion.h2
           {...animateOnScroll(fadeRight)}
-          className="col-span-3 mb-6 pl-2 subheading md:col-start-3"
+          className="col-span-3 mb-6 pl-6 subheading md:col-start-4"
         >
           &hellip; /Projects &hellip;
         </motion.h2>
