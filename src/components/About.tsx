@@ -161,7 +161,7 @@ const About = () => {
           className="custom-container mt-6 px-4 text-right text-xl sm:px-8 lg:px-12"
         >
           <p className="text-gray-100">Work experience</p>
-          <p className="italic">1 year 1 month</p>
+          <p className="italic">1 year 4 months</p>
         </motion.div>
       </section>
     </section>
