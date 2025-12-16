@@ -5,6 +5,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import ProfessionalWork from "./components/ProfessionalWork";
 import Projects from "./components/Projects";
 import Socials from "./components/Socials";
 import BreakpointProvider from "./providers/breakpointProvider";
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <Socials />
       <About />
+      <ProfessionalWork />
       <Projects />
       <Footer />
 

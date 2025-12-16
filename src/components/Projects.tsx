@@ -14,7 +14,7 @@ const Projects = () => {
           {...animateOnScroll(fadeRight)}
           className="col-span-3 mb-6 pl-6 subheading md:col-start-4"
         >
-          &hellip; /Projects &hellip;
+          &hellip; /Personal projects &hellip;
         </motion.h2>
       </div>
 
