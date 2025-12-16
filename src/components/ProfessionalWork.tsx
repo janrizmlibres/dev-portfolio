@@ -103,7 +103,7 @@ const ProfessionalWork = () => {
           {...animateOnScroll(fadeRight)}
           className="col-span-5 md:col-span-3 mb-6 lg:pl-8 subheading lg:col-start-3"
         >
-          &hellip; /Professional Projects &hellip;
+          &hellip; /Professional Work &hellip;
         </motion.h2>
       </div>
 
