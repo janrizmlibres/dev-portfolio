@@ -1,7 +1,7 @@
-import { LockKeyIcon } from "@phosphor-icons/react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
 
-import { animateOnScroll, fadeRight, fadeUp } from "../animation";
+import { animateOnScroll, fadeRight } from "../animation";
 import { cn } from "../utils";
 
 interface ProjectProps {
@@ -92,83 +92,86 @@ const projects: ProjectProps[] = [
 ];
 
 const ProfessionalWork = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section className="custom-container relative mb-32 px-4 sm:px-8 lg:px-12">
       <div id="professional-work" className="absolute -top-32"></div>
 
       <div className="grid grid-cols-5 gap-4 lg:grid-cols-6">
-        <motion.div
-          {...animateOnScroll(fadeRight)}
-          className="col-span-5 mb-6 flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm md:col-span-3 md:mb-6 lg:col-span-3"
-        >
-          <LockKeyIcon className="mt-1 shrink-0 text-xl text-yellow-500/80" />
-          <p className="text-sm leading-relaxed text-gray-300">
-            Due to Non-Disclosure Agreements (NDA), source code and live demos
-            are not available. These case studies focus on the technical
-            challenges and architectural decisions.
-          </p>
-        </motion.div>
-
         <motion.h2
           {...animateOnScroll(fadeRight)}
-          className="col-span-3 mb-6 pl-6 subheading md:col-start-4"
+          className="col-span-5 md:col-span-3 mb-6 lg:pl-8 subheading lg:col-start-3"
         >
-          &hellip; /Professional Work &hellip;
+          &hellip; /Professional Projects &hellip;
         </motion.h2>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project, index) => (
-          <ProfessionalProjectCard key={index} {...project} />
-        ))}
-      </div>
-    </section>
-  );
-};
-
-const ProfessionalProjectCard = ({
-  title,
-  tech,
-  description,
-  contributions,
-}: ProjectProps) => {
-  return (
-    <motion.div
-      {...animateOnScroll(fadeUp)}
-      className={cn(
-        "group relative cursor-default overflow-hidden rounded-4xl border-1 border-gray-200 p-5 sm:p-6",
-        "flex flex-col justify-between transition-colors duration-600 ease-in-out hover:duration-800",
-        "active:duration-800"
-      )}
-    >
-      <div>
-        <h4 className="mb-2 text-xl lg:text-2xl transition-colors duration-600 ease-in-out group-hover:text-gray-200 group-active:text-gray-200">
-          {title}
-        </h4>
-        <div className="mb-4 flex flex-wrap gap-2 font-fira-code duration-600 ease-in-out group-hover:text-gray-200 group-active:text-gray-200">
-          {tech}
+      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
+        {/* Left Column: Titles */}
+        <div className="flex w-full gap-2 overflow-x-auto pb-4 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0 lg:h-[330px] lg:w-1/3 lg:pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+          {projects.map((project, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={cn(
+                "group relative flex shrink-0 items-center justify-between overflow-hidden rounded-2xl border px-6 py-4 text-left transition-all duration-300 whitespace-nowrap lg:w-full lg:whitespace-normal",
+                activeIndex === index
+                  ? "bg-light-100 border-light-100 text-dark-100"
+                  : "border-gray-200 hover:border-light-100 hover:text-light-100 text-gray-100 bg-transparent"
+              )}
+            >
+              <span className="relative z-1 font-medium">{project.title}</span>
+              {activeIndex === index && (
+                <motion.span
+                  layoutId="activeIndicator"
+                  className="absolute inset-0 z-0 bg-light-100"
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              )}
+            </button>
+          ))}
         </div>
 
-        <p className="mb-6 text-gray-100 transition-colors duration-600 ease-in-out group-hover:text-gray-200 group-active:text-gray-200">
-          {description}
-        </p>
+        {/* Right Column: Details */}
+        <div className="w-full lg:w-2/3">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="rounded-3xl border border-gray-200 p-6 sm:p-8"
+            >
+              <h3 className="mb-4 text-2xl text-light-100 lg:text-3xl">
+                {projects[activeIndex].title}
+              </h3>
+              
+              <div className="mb-6 font-fira-code text-sm text-gray-100 lg:text-base">
+                <span className="text-light-100">Tech Stack:</span>{" "}
+                {projects[activeIndex].tech}
+              </div>
 
-        <ul className="mb-6 list-inside list-disc space-y-2 text-gray-100 transition-colors duration-600 ease-in-out group-hover:text-gray-200 group-active:text-gray-200">
-          {contributions.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
+              <p className="mb-8 text-gray-100 leading-relaxed">
+                {projects[activeIndex].description}
+              </p>
+
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-light-100">Key Contributions:</h4>
+                <ul className="list-inside list-disc space-y-3 text-gray-100">
+                  {projects[activeIndex].contributions.map((item, i) => (
+                    <li key={i} className="leading-relaxed">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
-
-      <span
-        className={cn(
-          "absolute top-1/2 left-1/2 -z-1 m-[-75%] h-0 w-3/2 translate-z-0 scale-0 rounded-full",
-          "bg-light-100 object-contain pt-[150%] opacity-100",
-          "transition-all duration-600 ease-in-out group-hover:scale-100 group-hover:duration-800",
-          "group-active:scale-100 group-active:duration-800"
-        )}
-      ></span>
-    </motion.div>
+    </section>
   );
 };
 
