@@ -1,3 +1,4 @@
+import { InfoIcon } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
@@ -101,34 +102,44 @@ const ProfessionalWork = () => {
       <div className="grid grid-cols-5 gap-4 lg:grid-cols-6">
         <motion.h2
           {...animateOnScroll(fadeRight)}
-          className="col-span-5 md:col-span-3 mb-6 lg:pl-8 subheading lg:col-start-3"
+          className="col-span-5 md:col-span-3 mb-6 lg:pl-8 subheading md:col-start-3"
         >
           &hellip; /Professional Work &hellip;
+          <span className="group relative inline-block ml-3 align-middle">
+            <InfoIcon
+              size={20}
+              className="text-gray-400 hover:text-light-100 cursor-help transition-colors"
+            />
+            <span className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 w-64 -translate-x-1/2 rounded-lg border border-gray-700 bg-gray-200 p-3 font-sans text-xs font-normal tracking-normal text-light-100 normal-case opacity-0 shadow-xl transition-opacity duration-300 group-hover:opacity-100">
+              <span className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 border-b border-r border-gray-700 bg-gray-200"></span>
+              Due to Non-Disclosure Agreements (NDA), sensitive details, visual assets (screenshots, demos, etc.), and proprietary implementation specifics have been omitted.
+            </span>
+          </span>
         </motion.h2>
       </div>
 
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-12">
         {/* Left Column: Titles */}
         <motion.div
           {...animateOnScroll(fadeUp)}
-          className="flex w-full gap-2 overflow-x-auto pb-4 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0 lg:h-[330px] lg:w-1/3 lg:pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
+          className="scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent flex w-full gap-2 overflow-x-auto pb-4 md:h-[330px] md:w-1/3 md:flex-col md:overflow-y-auto md:overflow-x-hidden md:pb-0 md:pr-2"
         >
           {projects.map((project, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
               className={cn(
-                "group relative flex shrink-0 items-center justify-between overflow-hidden rounded-2xl border px-6 py-4 text-left transition-all duration-300 whitespace-nowrap lg:w-full lg:whitespace-normal",
+                "group relative flex shrink-0 items-center justify-between overflow-hidden rounded-2xl border px-6 py-4 text-left whitespace-nowrap transition-all duration-300 md:w-full md:whitespace-normal",
                 activeIndex === index
                   ? "bg-light-100 border-light-100 text-dark-100"
-                  : "border-gray-200 hover:border-light-100 hover:text-light-100 text-gray-100 bg-transparent"
+                  : "border-gray-200 hover:border-light-100 hover:text-light-100 bg-transparent text-gray-100"
               )}
             >
-              <span className="relative z-1 font-medium">{project.title}</span>
+              <span className="z-1 relative font-medium">{project.title}</span>
               {activeIndex === index && (
                 <motion.span
                   layoutId="activeIndicator"
-                  className="absolute inset-0 z-0 bg-light-100"
+                  className="bg-light-100 absolute inset-0 z-0"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -137,7 +148,7 @@ const ProfessionalWork = () => {
         </motion.div>
 
         {/* Right Column: Details */}
-        <motion.div {...animateOnScroll(fadeUp)} className="w-full lg:w-2/3">
+        <motion.div {...animateOnScroll(fadeUp)} className="w-full md:w-2/3">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -147,21 +158,23 @@ const ProfessionalWork = () => {
               transition={{ duration: 0.3 }}
               className="rounded-3xl border border-gray-200 p-6 sm:p-8"
             >
-              <h3 className="mb-4 text-2xl text-light-100 lg:text-3xl">
+              <h3 className="text-light-100 mb-4 text-2xl lg:text-3xl">
                 {projects[activeIndex].title}
               </h3>
-              
-              <div className="mb-6 font-fira-code text-sm text-gray-100 lg:text-base">
+
+              <div className="font-fira-code text-gray-100 mb-6 text-sm lg:text-base">
                 <span className="text-light-100">Tech Stack:</span>{" "}
                 {projects[activeIndex].tech}
               </div>
 
-              <p className="mb-8 text-gray-100 leading-relaxed">
+              <p className="text-gray-100 mb-8 leading-relaxed">
                 {projects[activeIndex].description}
               </p>
 
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-light-100">Key Contributions:</h4>
+                <h4 className="text-light-100 text-lg font-semibold">
+                  Key Contributions:
+                </h4>
                 <ul className="list-inside list-disc space-y-3 text-gray-100">
                   {projects[activeIndex].contributions.map((item, i) => (
                     <li key={i} className="leading-relaxed">
