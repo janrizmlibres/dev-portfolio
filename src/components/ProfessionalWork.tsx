@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
-import { animateOnScroll, fadeRight } from "../animation";
+import { animateOnScroll, fadeRight, fadeUp } from "../animation";
 import { cn } from "../utils";
 
 interface ProjectProps {
@@ -109,7 +109,10 @@ const ProfessionalWork = () => {
 
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
         {/* Left Column: Titles */}
-        <div className="flex w-full gap-2 overflow-x-auto pb-4 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0 lg:h-[330px] lg:w-1/3 lg:pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+        <motion.div
+          {...animateOnScroll(fadeUp)}
+          className="flex w-full gap-2 overflow-x-auto pb-4 lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0 lg:h-[330px] lg:w-1/3 lg:pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
+        >
           {projects.map((project, index) => (
             <button
               key={index}
@@ -131,10 +134,10 @@ const ProfessionalWork = () => {
               )}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Right Column: Details */}
-        <div className="w-full lg:w-2/3">
+        <motion.div {...animateOnScroll(fadeUp)} className="w-full lg:w-2/3">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -169,7 +172,7 @@ const ProfessionalWork = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
