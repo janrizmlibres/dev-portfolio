@@ -1,67 +1,46 @@
 # Developer Portfolio
 
-![GitHub Release](https://img.shields.io/github/v/release/janrizmlibres/dev-portfolio?color=orange)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fjanrizlibres.vercel.app%2F)](http://janrizlibres.vercel.app/)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+My first developer portfolio, a single-page site built from scratch with React, TypeScript and Vite. It shows my professional work, my projects and the ways to reach me. It has since been replaced by [portfolio-v2](https://github.com/janrizmlibres/portfolio-v2), but it still runs at [janrizlibres.vercel.app](https://janrizlibres.vercel.app).
 
-![Hero Section](images/hero.png)
+![Hero section](images/hero.png)
 
-## 🌐 Link
+## What's on the page
 
-Here is the live site: http://janrizlibres.vercel.app/
+The page runs top to bottom through these sections.
 
-## 📝 Description
+- **Hero**, with a link down to the projects.
+- **Socials**, a marquee of my links that scrolls in an endless loop.
+- **About**, with the tools I use across the stack.
+- **Professional work**, the projects I built on the job and the stack behind each one.
+- **Projects**, featuring FlowStack, PulseVR and Mercado.
+- **Footer.**
 
-This repository contains the source code for my personal developer portfolio. It was built from scratch using React, Vite, and TypeScript to create a modern, performant, and visually engaging single-page application. The portfolio serves as a central hub to showcase my skills, featured projects, and professional work experience through a clean, fully responsive, and animated interface.
+Animations on scroll and hover use [Motion](https://motion.dev/), and the layout is responsive with Tailwind CSS v4. The content lives in `src/data.ts` and in the section components under `src/components/`.
 
-## 📖 Table of Contents
+## Running it
 
-- [🌐 Link](#-link)
-- [📝 Description](#-description)
-- [✨ Features](#-features)
-- [💻 Technologies Used](#️-technologies-used)
-- [📩 Bug Report](#-bug-report)
-- [📞 Contact Me](#-contact-me)
-- [📋 License](#-license)
+You need Node.js and npm.
 
-## ✨ Features
+```bash
+git clone https://github.com/janrizmlibres/dev-portfolio.git
+cd dev-portfolio
+npm install
+npm run dev
+```
 
-👉 **Modern & Responsive Design**: Built with Tailwind CSS for a seamless, mobile-first experience that adapts perfectly to any screen size.
+The dev server opens on <http://localhost:5173>. No environment variables are needed.
 
-👉 **Smooth Animations**: Leverages the motion library to implement engaging scroll-based and interactive animations throughout the site, providing a dynamic user experience.
+| Script | What |
+|---|---|
+| `npm run dev` | Vite dev server |
+| `npm run build` | Typecheck, then a production build into `dist/` |
+| `npm run preview` | Serve the production build |
+| `npm run lint` | ESLint |
 
-👉 **Dynamic Project Showcase**: A detailed section presenting projects like DevFlow and PulseVR with complex, visually appealing layouts.
+## Stack
 
-👉 **Skills & Experience**: Clearly defined sections for technical skills across the full stack (frontend, backend, DevOps) and a timeline of my work history.
+React 19, TypeScript 5, Vite 6, Tailwind CSS v4, Motion and Phosphor Icons.
 
-👉 **Infinite Socials Marquee**: An eye-catching, auto-scrolling marquee that displays social media links in an infinite loop.
+## License
 
-## 💻 Technologies Used
-
-- [![React][React.js]][React-url]
-- [![TypeScript][TypeScript]][TypeScript-url]
-- [![Vite][Vite]][Vite-url]
-- [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
-
-## 📩 Bug Report
-
-If you find a bug, kindly open an issue [here](https://github.com/janrizmlibres/dev-portfolio/issues/new) by including a description of your problem and the expected result.
-
-## 📞 Contact Me
-
-[![Static Badge](https://img.shields.io/badge/LinkedIn-janrizlibres-blue?style=flat&logo=linkedin&logoColor=%23b0c0c0&labelColor=%23363D44)
-](https://www.linkedin.com/in/janrizlibres/)
-
-## 📋 License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-Released 2025 by Janriz Libres @janrizmlibres
-
-[React.js]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
-[React-url]: https://react.dev/
-[TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
-[TypeScript-url]: https://www.typescriptlang.org/
-[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
-[Vite-url]: https://vite.dev/
-[TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
-[TailwindCSS-url]: https://tailwindcss.com/
+MIT. Released in 2025 by Janriz Libres.
