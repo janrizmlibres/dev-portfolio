@@ -43,4 +43,4 @@ React 19, TypeScript 5, Vite 6, Tailwind CSS v4, Motion and Phosphor Icons.
 
 ## License
 
-MIT. Released in 2025 by Janriz Libres.
+MIT. Released in 2025 by Janriz Libres. See [LICENSE](LICENSE).
